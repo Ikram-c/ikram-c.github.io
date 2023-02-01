@@ -143,7 +143,7 @@ For assessing the accuracy of the models the following metrics were used (***Skl
 
 ![Fight history sample image](https://user-images.githubusercontent.com/68299933/214124410-98832400-23ed-466a-b826-11c450dd7ccb.jpg)
 
-(Sample of fight history)
+(Sample of fight history for bjj competitor: Andre Galvao)
 
 ----------------------------------------------------
 ## Pyspark basics project
