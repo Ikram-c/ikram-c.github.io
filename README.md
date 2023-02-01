@@ -111,6 +111,7 @@ The machine learning models used for this project included:
 - ***KNN from surprise library***
 - ***NMF from surprise library***
 - ***Tensor flow Neural Network classifier using embeddings***
+
 ![comparison of supervised models](https://user-images.githubusercontent.com/68299933/215771976-d9d1eef3-7f5e-4117-a91e-7c09d0fa71b8.jpg)
 
 (sample of comparison of supervised models)
@@ -137,6 +138,7 @@ The following ML models were used for classification (***Sklearn***):
 - ***Decision Tree Classifier***
 
 For assessing the accuracy of the models the following metrics were used (***Sklearn***):
+
 -confusion matrix
 - f1 score
 
@@ -176,6 +178,10 @@ The aim of this project was to cover the basics of Seaborn. The following featur
 - Regression Plots
 - Plot Customization
 
+![Sample of testing seaborn lmplot()](https://user-images.githubusercontent.com/68299933/216019762-057d64f3-78e3-4d70-8750-240cb6b55c24.jpg)
+
+(Sample of testing seaborn lmplot())
+
 ------------------------------------------------------------------------------------------
 ## Matplotlib mini project
 (https://github.com/Ikram-c/MatplotLib-mini-project)
@@ -188,6 +194,10 @@ The aim of this project was to cover the basics of Matplotlib. The following fea
 - Setting Colors, Linewidths, Linetypes
 - Plot Range
 - Special Plot Types
+
+![Sample of testing matplotlib line and marker styles](https://user-images.githubusercontent.com/68299933/216019834-264949cb-c039-408b-95d1-702667616037.jpg)
+
+(Sample of testing matplotlib line and marker styles)
 
 ------------------------------------------------------------------------------------------
 ## EDA using Numpy and Pandas
@@ -204,6 +214,10 @@ The following functions were covered:
 - GroupBy functions
 - Apply funcions
 
+![Sample of checking stats of dataset](https://user-images.githubusercontent.com/68299933/216018675-0fb3968e-88ab-4869-9937-3a7f6d28185e.jpg)
+
+(Sample of checking stats of dataset)
+
 ----------------------------------------------------------
 ## Number Guessing Game
 (https://github.com/Ikram-c/Number-guessing-game)
@@ -219,3 +233,7 @@ Requirements:
 - If they are out of guesses or have guessed the correct number Print out their guesses and the correct number
 - Ask the user if they want to play again
 - If they decide to stop playing, output the number of attempts and correct guesses
+
+![number guessing game flow chart](https://user-images.githubusercontent.com/68299933/216026817-ab6718b9-20cf-49c5-9667-958b20950e35.jpg)
+
+(number guessing game flow chart)
