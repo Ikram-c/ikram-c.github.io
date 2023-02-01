@@ -138,8 +138,7 @@ The following ML models were used for classification (***Sklearn***):
 - ***Decision Tree Classifier***
 
 For assessing the accuracy of the models the following metrics were used (***Sklearn***):
-
--confusion matrix
+- confusion matrix
 - f1 score
 
 ![Fight history sample image](https://user-images.githubusercontent.com/68299933/214124410-98832400-23ed-466a-b826-11c450dd7ccb.jpg)
