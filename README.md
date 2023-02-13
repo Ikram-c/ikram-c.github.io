@@ -69,6 +69,7 @@ The following Unsupervised classification models were then used:
 
 ## Credit Card Fraud Detection Deep Learning (part of IBM ML certification)
 https://github.com/Ikram-c/credit_card_fraud_detection_deep_learning_IBM_project
+
 The aim of the project was to use Deep Learning, specifically autoencoding, to help classify which credit card transactions are fraudulent. The data used for this project is the "Credit Card Fraud Detection" dataset. The dataset was imbalanced with only 492 fraud transactions occuring out of 284,807 total transactions thus requiring Deep learning.
 
 For the EDA process the data was checked for nulls and its distribution was checked through the ***Anderson-Darling*** test, the ***Shapiro-Wilk*** test and the ***D'Agostino's K^2*** test and normalization tests were run using the ***MinMaxScaler***, ***StandardScaler*** scalers and using ***log_10*** to try to normalize the data. A ***t-SNE*** plot was used to vizualise data using a sample of 2000 non fraudulent cases.
@@ -96,6 +97,7 @@ The performance of the models were then assessed using their F1 score
 
 ## Course Recommender System
 https://github.com/Ikram-c/Course-Recommendor-System-IBM-
+
 The aim of this project was to use various machine learning models for a course recommender system. The dataset which was used was the IBM Course Recommendations dataset which is a collection of data related to IBM courses (specifically those on python) and the interactions students had with them (these were saved as CSVs).
 As part of the EDA a ***word cloud** was also used.
 
