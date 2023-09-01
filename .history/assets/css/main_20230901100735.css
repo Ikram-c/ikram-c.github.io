@@ -72,12 +72,11 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Extra features -> https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Add_a_text_shadow */
+/* Extra features */
+h1 {
+	text-shadow: 2px 2px #000000;
+  }
 
-  h1 {
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
-}
 
 /* Basic */
 
