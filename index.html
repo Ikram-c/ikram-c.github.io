@@ -57,41 +57,179 @@
                 border-top: 1px solid #eee;
                 text-align: right;
             }
+
+            /* --- Custom Golden Ratio About Me Layout --- */
+            .custom-about-wrapper {
+                --noir-steel: #3C486B;
+                --moon-frost: #F0F0F0;
+                background-color: var(--moon-frost);
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                color: #333;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            .custom-about-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.618fr; /* 1:1.618 Golden Ratio Split */
+                min-height: 650px;
+            }
+
+            .custom-about-sidebar {
+                background-color: var(--noir-steel);
+                color: var(--moon-frost);
+                padding: 3rem 2rem;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .custom-about-sidebar h3 {
+                font-size: 2.5rem;
+                margin: 0;
+                color: var(--moon-frost);
+                line-height: 1.1;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .custom-about-sidebar h3 span {
+                color: rgba(255, 255, 255, 0.5);
+                display: block;
+                font-size: 1.5rem;
+                margin-top: 0.5rem;
+            }
+
+            .custom-about-sidebar .hex-code {
+                font-family: monospace;
+                font-size: 1.1rem;
+                opacity: 0.7;
+                margin-top: 1rem;
+            }
+
+            .custom-about-main {
+                background-color: var(--moon-frost);
+                padding: 3rem 4rem;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            .custom-about-main .profile-pic {
+                width: 180px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 6px solid var(--noir-steel);
+                margin-bottom: 1.5rem;
+                box-shadow: 0 4px 15px rgba(60, 72, 107, 0.2);
+            }
+
+            .custom-about-main .intro-lead {
+                font-size: 1.15rem;
+                line-height: 1.7;
+                color: #222;
+                margin-bottom: 2rem;
+            }
+
+            .custom-about-main h4 {
+                color: var(--noir-steel);
+                font-size: 1.3rem;
+                margin: 1.5rem 0 0.8rem 0;
+                border-bottom: 2px solid rgba(60, 72, 107, 0.1);
+                padding-bottom: 0.4rem;
+            }
+
+            .custom-about-main ul {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            .custom-about-main ul li {
+                margin-bottom: 1.2rem;
+                line-height: 1.6;
+                font-size: 0.95rem;
+                position: relative;
+                padding-left: 1.5rem;
+            }
+
+            .custom-about-main ul li::before {
+                content: "•";
+                color: var(--noir-steel);
+                font-size: 1.5rem;
+                position: absolute;
+                left: 0;
+                top: -0.2rem;
+            }
+
+            .custom-about-main a {
+                color: var(--noir-steel);
+                font-weight: bold;
+                border-bottom: 1px solid rgba(60, 72, 107, 0.4);
+                text-decoration: none;
+                transition: border-color 0.2s ease;
+            }
+
+            .custom-about-main a:hover {
+                color: var(--noir-steel);
+                border-bottom: 1px solid var(--noir-steel);
+            }
+
+            /* Responsive fallback for the layout grid */
+            @media screen and (max-width: 980px) {
+                .custom-about-grid {
+                    grid-template-columns: 1fr;
+                }
+                .custom-about-sidebar {
+                    padding: 2rem;
+                    min-height: auto;
+                }
+                .custom-about-main {
+                    padding: 2rem;
+                }
+            }
         </style>
     </head>
     <body class="is-preload landing">
         <div id="page-wrapper">
 
             <header id="header">
-                    <h1 id="logo"><a href="index.html">Ikram-C</a></h1>
-                    <nav id="nav">
-                        <ul>
-                            <li><a href="#banner">Home</a></li>
-                            <li><a href="#one">Projects</a></li>
-                            <li><a href="ongoing-work.html">Ongoing Work</a></li>
-                            <li><a href="#plum-process">WIP Process</a></li>
-                            <li><a href="#three">About Me</a></li>
-                            <li><a href="#timeline">Timeline</a></li>
-                            <li><a href="#archives">Archives</a></li>
-                            <li><a href="#four">Contact</a></li>
-                        </ul>
-                    </nav>
-                </header>
+                <h1 id="logo"><a href="index.html">Ikram-C</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#banner">Home</a></li>
+                        <li><a href="#one">Projects</a></li>
+                        <li><a href="ongoing-work.html">Ongoing Work</a></li>
+                        <li><a href="#plum-process">WIP Process</a></li>
+                        <li><a href="#three">About Me</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#cad-gallery">CAD Gallery</a></li>
+                        <li><a href="#four">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
 
             <section id="banner">
-                    <div class="content">
-                        <span class="image"><img src="images/pic01.png" alt="" /></span>
-                        <header>
-                            <h2>Ikram Choudhury</h2>
-                            <p>Data Scientist<br />
-                            Specialising in AI and Computer Vision for marine science and bio-imaging<br />
-                            Current Company/Institute: Centre of Environment Fisheries and Aquaculture Science<br /> 
-                            (CEFAS)
-                            </p>
-                        </header>
-                    </div>
-                    <a href="#one" class="goto-next scrolly">Next</a>
-                </section>
+                <div class="content">
+                    <span class="image"><img src="images/pic01.png" alt="" /></span>
+                    <header>
+                        <h2>Ikram Choudhury</h2>
+                        <p>Data Scientist<br />
+                        Specialising in AI and Computer Vision for marine science and bio-imaging<br />
+                        Current Company/Institute: Centre of Environment Fisheries and Aquaculture Science<br /> 
+                        (CEFAS)
+                        </p>
+                    </header>
+                </div>
+                <a href="#one" class="goto-next scrolly">Next</a>
+            </section>
 
             <section id="one" class="projects-section">
                 <div class="section-header">
@@ -123,7 +261,7 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </div>
                  
                 <a href="#plum-process" class="goto-next scrolly">Next</a>
@@ -155,26 +293,45 @@
                 <a href="#three" class="goto-next scrolly">Next</a>
             </section>
 
-            <section id="three" class="wrapper style1 special fade-up about-me-section">
+            <section id="three" class="wrapper style1 fade-up">
                 <div class="container">
-                    <header>
-                        <h2>About Me</h2>
-                    </header>
-                    
-                    <div class="about-me-content">
-                        <div class="about-me-image">
-                            <img src="images/pic08.jpg" alt="Ikram's profile picture" />
-                        </div>
-                        <div class="about-me-text">
-                            <div class="text-box">
-                                <p>Data Scientist -> official title. Full stack dev -> actual day to day tasks</p>
+                    <div class="custom-about-wrapper">
+                        <div class="custom-about-grid">
+                            
+                            <div class="custom-about-sidebar">
+                                <div>
+                                    <h3>Noir <span>Steel</span></h3>
+                                    <p class="hex-code">#3C486B</p>
+                                </div>
+                                <div>
+                                    <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0;">
+                                        Layout organized on a 1 : 1.618 structural split.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="text-box">
-                                <p>Primary focus: Computer Vision and Efficiency Orientated System Design</p>
+
+                            <div class="custom-about-main">
+                                <img src="images/pic08.jpg" alt="Ikram's profile picture" class="profile-pic" />
+                                
+                                <p class="intro-lead">
+                                    I’m a Data Scientist and AI/ML Researcher focused on building practical computer vision pipelines and scalable algorithms grounded in reality. For me, impactful engineering isn't about chasing theoretical perfection with unlimited compute; it's about bounding complex spatial problems by real-world constraints, openly challenging standard methodologies when they fall short, and knowing when to step back from the terminal to gain strategic clarity.
+                                </p>
+
+                                <h4>Core Focus & Technical Deep Dives</h4>
+                                <ul>
+                                    <li><strong>Engineering Reality Over Theory:</strong> My foundational work stems from an ongoing evolution in how machines see the world—documented in <a href="https://medium.com/@ikramchoudhury0/a-vision-for-a-better-price-an-overview-on-my-journey-into-computer-vision-c8e563b1da7c" target="_blank">my journey into computer vision</a>—which directly drives how I tackle high-performance bottlenecks like <a href="https://medium.com/@ikramchoudhury0/gpu-accelerated-image-shape-analysis-in-python-edge-detection-cbb49350977f" target="_blank">GPU-accelerated image shape analysis</a>.</li>
+                                    <li><strong>Questioning the Defaults:</strong> I constantly look to interrogate standard approaches to see if they actually serve the task at hand. Sometimes that means building specialized workarounds like <a href="https://medium.com/@ikramchoudhury0/the-sahi-polygon-splitter-almost-37e345769562" target="_blank">the SAHI polygon splitter</a>, deciding exactly <a href="https://medium.com/@ikramchoudhury0/how-i-ditched-ious-40d766033268" target="_blank">how I ditched IoUs</a> for more robust custom metrics, or choosing to fundamentally <a href="https://medium.com/@ikramchoudhury0/rethink-human-pose-estimation-cba6752b52fc" target="_blank">rethink human pose estimation</a>.</li>
+                                    <li><strong>Reframing the Problem:</strong> When edge cases hit hard, I rely on mental models that flip the perspective. Applying <a href="https://medium.com/@ikramchoudhury0/the-inverted-problem-254f21f4ede0" target="_blank">the inverted problem</a> helps strip away noise to isolate core algorithmic truths, while drawing cross-domain inspiration from unexpected places—like <a href="https://medium.com/@ikramchoudhury0/nlp-reflections-by-the-bosporus-strait-12b15f91b45f" target="_blank">NLP reflections by the Bosporus Strait</a>—keeps pipelines adaptable.</li>
+                                </ul>
+
+                                <h4>Philosophy & Mindset</h4>
+                                <ul>
+                                    <li><strong>Strategic Deliberation:</strong> Good code requires quiet thought. My <a href="https://medium.com/@ikramchoudhury0/my-personal-approach-to-research-54579531a3b7" target="_blank">personal approach to research</a> prioritizes methodical execution, which often starts with the conscious decision to <a href="https://medium.com/@ikramchoudhury0/let-go-of-the-keyboard-d6a48fc19e9b" target="_blank">let go of the keyboard</a> to map out architecture before writing a single line.</li>
+                                    <li><strong>Introspection & Autonomy:</strong> I believe sustainable research requires room for unstructured, candid reflection—whether capturing raw thoughts on a quiet <a href="https://medium.com/@ikramchoudhury0/sunday-july-something-time-unknown-26430f4eeb2f" target="_blank">Sunday, July something</a>, examining the internal resistance of <a href="https://medium.com/@tnzkqsd/why-fear-89f1eebf97a3" target="_blank">why fear?</a>, or exploring what true creative and technical <a href="https://medium.com/@tnzkqsd/freedom-is-3f50a263c432" target="_blank">freedom is</a>.</li>
+                                    <li><strong>Community & Collaboration:</strong> None of this work happens in a vacuum. Beyond the codebases, I view building robust data ecosystems as a collective effort, offering <a href="https://medium.com/@ikramchoudhury0/a-rallying-call-721a3455b357" target="_blank">a rallying call</a> to foster open, collaborative problem-solving across the industry.</li>
+                                </ul>
                             </div>
-                            <div class="text-box">
-                                <p>Swamped but can be bribed with a cuppa</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -194,7 +351,7 @@
                             <div class="timeline-content">
                                 <h3>BEng Aerospace Engineering</h3>
                                 <ul>
-                                    <li>Automated Aircraft Conceptual design using Microsoft Excel <a href="#archives" class="icon solid fa-arrow-down">[View in Archives]</a></li>
+                                    <li>Automated Aircraft Conceptual design using Microsoft Excel</li>
                                     <li>Iterative design based on a given Spec</li>
                                     <li>Multivariate analysis: Given target values, find convergence</li>
                                 </ul>
@@ -268,54 +425,19 @@
                         </div>
                     </div>
                 </div>
-                <a href="#archives" class="goto-next scrolly">Next</a>
+                <a href="#cad-gallery" class="goto-next scrolly">Next</a>
             </section>
 
-            <section id="archives" class="wrapper style1 special fade-up">
+            <section id="cad-gallery" class="wrapper style1 special fade-up">
                 <div class="container">
                     <header>
-                        <h2>Old Work Archives</h2>
-                        <p>Repository of tools, documents, and designs from previous projects.</p>
+                        <h2>CAD Gallery</h2>
+                        <p>Bridging the gap between 3D art, conceptual modeling, and computer vision.</p>
                     </header>
                     
-                    <div class="file-card">
-                        <h3>Raymer Calculations (Excel Tool)</h3>
-                        <span class="file-meta">FILE TYPE: .XLSX | CONTEXT: BEng AEROSPACE ENGINEERING</span>
-                         
-                        <p>A comprehensive automated design tool built in Microsoft Excel for Aircraft Conceptual Design. This tool facilitates iterative sizing and multivariate analysis based on Raymer's methodology. Key capabilities include:</p>
-                        <ul>
-                            <li><strong>Initial Sizing & Weight Estimation:</strong> Automated empty weight and fuel fraction estimation for Heavy Lift UAVs.</li>
-                            <li><strong>Performance Analysis:</strong> Modules for calculating climb, glide, turning, and landing performance.</li>
-                            <li><strong>Aerodynamics & Structure:</strong> Lift coefficient analysis and fuselage length sizing.</li>
-                            <li><strong>Propulsion & Launch:</strong> Motor selection and catapult launch calculations.</li>
-                        </ul>
-                         
-                        <a href="assets/Raymer calculations.xlsx" class="button primary icon solid fa-download">Download Spreadsheet</a>
-                    </div>
-
-                    <hr class="major" />
-                    
-                    <div class="noise-control-panel" style="margin: 0 auto 3em auto; max-width: 600px; text-align: center; padding: 1.5em; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
-                        <h4 style="color: #6b9086; margin-bottom: 0.5em;">Atmosphere Settings</h4>
-                        <p style="font-size: 0.9em; font-style: italic; color: rgba(255,255,255,0.6); margin-bottom: 1em;">
-                            Adjust the film grain intensity for the CAD Gallery below.
-                        </p>
-                        
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-                            <span style="font-size: 0.8em; color: rgba(255,255,255,0.5);">CLEAN</span>
-                            
-                            <input type="range" id="noiseSlider" min="0" max="1" step="0.01" value="0.25" 
-                                   style="width: 100%; max-width: 300px; accent-color: #6b9086; cursor: pointer;">
-                            
-                            <span style="font-size: 0.8em; color: rgba(255,255,255,0.5);">GRITTY</span>
-                        </div>
-                    </div>
-
                     <div id="cad-gallery-archive">
-                        <h3>CAD Gallery</h3>
-                        
                         <div class="offset-box offset-left">
-                            <ul style="margin-bottom: 0;">
+                            <ul style="margin-bottom: 0; text-align: left;">
                                 <li>Prior to getting into Data Science and AI, I was fascinated by 3d Art.</li>
                                 <li>Throughout my Secondary School (High-School) years and my Bachelor's, I experimented with different packages, techniques, and methods for both academic purposes and as a hobby.</li>
                                 <li>I explored and created with conceptual art packages such as Zbrush, animation grade packages such as Cinema4d, and several engineering packages such as SOLIDWORKS and Fusion360.</li>
@@ -357,37 +479,28 @@
             </section>
 
             <footer id="footer">
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; Ikram_C. All rights reserved.</li><li>Manga_mod_of_HTML5UP_Landed: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
-                </footer>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Ikram_C. All rights reserved.</li><li>Manga_mod_of_HTML5UP_Landed: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
         </div>
 
         <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/jquery.dropotron.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-            <script src="assets/js/project-boxes.js"></script>
-
-            <script>
-                const slider = document.getElementById('noiseSlider');
-                if (slider) {
-                    slider.addEventListener('input', function(e) {
-                        document.documentElement.style.setProperty('--noise-opacity', e.target.value);
-                    });
-                }
-            </script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/project-boxes.js"></script>
     </body>
 </html>
