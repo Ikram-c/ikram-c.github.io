@@ -1,4 +1,158 @@
 <!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Ikram Choudhury</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Apply saved theme before paint to avoid flash -->
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') {
+                document.documentElement.setAttribute('data-theme', t);
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <div class="theme-switch" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-set="auto"  aria-pressed="false">Auto</button>
+        <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-set="dark"  aria-pressed="false">Dark</button>
+    </div>
+
+    <main class="wrap">
+
+        <section class="intro">
+            <div class="intro-head">
+                <img src="images/pic08.jpg" alt="Ikram Choudhury" />
+                <h1>Ikram Choudhury</h1>
+            </div>
+
+            <p>
+                I work with
+                <a href="https://ices-library.figshare.com/articles/report/Workshop_on_emerging_methods_and_technologies_for_the_automated_analysis_of_calcified_structures_WKETAC_/31161292?file=62612323"
+                   target="_blank" rel="noopener">marine scientists</a>
+                across
+                <a href="https://www.linkedin.com/posts/axel-s-ba67a1151_anunna-optifish-everyfish-share-7349108407385141249-KPp0"
+                   target="_blank" rel="noopener">Europe</a>
+                to solve environmental challenges
+                <a href="https://www.ices.dk/events/asc/2024/Documents/ASC%202024%20-%20Theme%20session%20J%20report.pdf"
+                   target="_blank" rel="noopener">using AI</a>.
+            </p>
+
+            <p>
+                Previously I worked as a data
+                <a href="https://www.linkedin.com/posts/data-consultants-datagrad-share-6949708210727473152-i5Ur"
+                   target="_blank" rel="noopener">consultant</a>
+                and had the privilege of writing a little production code for
+                British Airways…
+            </p>
+
+            <p>
+                …which I did after finishing my MSc in
+                <a href="https://www.linkedin.com/posts/ikram-choudhury_the-cert-finally-came-through-having-the-activity-6977391955106263040-as8d"
+                   target="_blank" rel="noopener">Space Engineering</a>
+                — note that this is different to Aerospace Engineering, which
+                I did for my
+                <a href="https://www.linkedin.com/posts/ikram-choudhury_my-degree-finally-came-in-the-post-i-can-activity-6722107934064680960-Lpxp"
+                   target="_blank" rel="noopener">undergraduate degree</a>.
+            </p>
+
+            <p>
+                During my adolescence I spent my summers creating comics using
+                3D animation tools and CAD, which inadvertently taught me UI
+                design…
+            </p>
+
+            <p>
+                …but since last summer I've been solo travelling across the UK
+                (and Istanbul).
+            </p>
+
+            <p>
+                I've written several informal
+                <a href="https://medium.com/@ikramchoudhury0"
+                   target="_blank" rel="noopener">blogs on AI</a>,
+                including an overview of my
+                <a href="https://medium.com/@ikramchoudhury0/my-personal-approach-to-research-54579531a3b7"
+                   target="_blank" rel="noopener">research method</a>.
+            </p>
+        </section>
+
+        <hr />
+
+        <section class="gallery">
+            <h2>CAD Gallery</h2>
+            <p>A small gallery of renders from those CAD experiments.</p>
+            <div class="gallery-frame">
+                <iframe src="https://ikram-c.github.io/cad_gallery/"
+                        title="CAD Gallery"
+                        loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <hr />
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>You can contact me on:</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/ikram-choudhury-7731921a3/"
+                   target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:ikramchoudhury0@gmail.com">Email</a>
+                <a href="https://github.com/ikram-c" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+
+        <footer>
+            &copy; Ikram_C. Layout adapted from
+            <a href="http://html5up.net" target="_blank" rel="noopener">LinkedIn</a>.
+        </footer>
+
+    </main>
+
+    <!-- Theme switch: Auto / Light / Dark -->
+    <script>
+        (function () {
+            var root    = document.documentElement;
+            var buttons = document.querySelectorAll('.theme-switch button[data-theme-set]');
+
+            function current() {
+                var v = root.getAttribute('data-theme');
+                return (v === 'light' || v === 'dark') ? v : 'auto';
+            }
+
+            function apply(state) {
+                if (state === 'auto') {
+                    root.removeAttribute('data-theme');
+                    localStorage.removeItem('theme');
+                } else {
+                    root.setAttribute('data-theme', state);
+                    localStorage.setItem('theme', state);
+                }
+                buttons.forEach(function (btn) {
+                    var active = btn.dataset.themeSet === state;
+                    btn.classList.toggle('is-active', active);
+                    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+                });
+            }
+
+            apply(current());
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    apply(btn.dataset.themeSet);
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
 <html>
     <head>
         <title>Ikram-C</title>
