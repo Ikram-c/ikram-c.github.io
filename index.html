@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <!-- Apply saved theme before paint to avoid flash -->
     <script>
         (function () {
             var t = localStorage.getItem('theme');
@@ -15,6 +14,13 @@
             }
         })();
     </script>
+    <style>
+        /* Ensures all paragraph and list hyperlinks in the content are bold and italic */
+        .wrap p a, .custom-about-main a {
+            font-weight: bold !important;
+            font-style: italic !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -35,19 +41,19 @@
             <p>
                 I work with
                 <a href="https://ices-library.figshare.com/articles/report/Workshop_on_emerging_methods_and_technologies_for_the_automated_analysis_of_calcified_structures_WKETAC_/31161292?file=62612323"
-                   target="_blank" rel="noopener">marine scientists</a>
+                   target="_blank" rel="noopener"><strong><em>marine scientists</em></strong></a>
                 across
                 <a href="https://www.linkedin.com/posts/axel-s-ba67a1151_anunna-optifish-everyfish-share-7349108407385141249-KPp0"
-                   target="_blank" rel="noopener">Europe</a>
+                   target="_blank" rel="noopener"><strong><em>Europe</em></strong></a>
                 to solve environmental challenges
                 <a href="https://www.ices.dk/events/asc/2024/Documents/ASC%202024%20-%20Theme%20session%20J%20report.pdf"
-                   target="_blank" rel="noopener">using AI</a>.
+                   target="_blank" rel="noopener"><strong><em>using AI</em></strong></a>.
             </p>
 
             <p>
                 Previously I worked as a data
                 <a href="https://www.linkedin.com/posts/data-consultants-datagrad-share-6949708210727473152-i5Ur"
-                   target="_blank" rel="noopener">consultant</a>
+                   target="_blank" rel="noopener"><strong><em>consultant</em></strong></a>
                 and had the privilege of writing a little production code for
                 British Airways…
             </p>
@@ -55,31 +61,33 @@
             <p>
                 …which I did after finishing my MSc in
                 <a href="https://www.linkedin.com/posts/ikram-choudhury_the-cert-finally-came-through-having-the-activity-6977391955106263040-as8d"
-                   target="_blank" rel="noopener">Space Engineering</a>
+                   target="_blank" rel="noopener"><strong><em>Space Engineering</em></strong></a>
                 — note that this is different to Aerospace Engineering, which
                 I did for my
                 <a href="https://www.linkedin.com/posts/ikram-choudhury_my-degree-finally-came-in-the-post-i-can-activity-6722107934064680960-Lpxp"
-                   target="_blank" rel="noopener">undergraduate degree</a>.
+                   target="_blank" rel="noopener"><strong><em>undergraduate degree</em></strong></a>.
             </p>
 
             <p>
                 During my adolescence I spent my summers creating comics using
-                3D animation tools and CAD, which inadvertently taught me UI
+                <a href="#cad-gallery"><strong><em>3D animation tools and CAD</em></strong></a>, which inadvertently taught me <a href="https://medium.com/@ikramchoudhury0/using-comics-to-understand-ux-layout-short-blog-c16bd14e8e86" target="_blank" rel="noopener"><strong><em>UI</em></strong></a>
                 design…
             </p>
 
             <p>
-                …but since last summer I've been solo travelling across the UK
+                …but since last summer I've been
+                <a href="https://medium.com/@ikramchoudhury0/solo-journeying-across-the-uk-b0541cd9a93a"
+                   target="_blank" rel="noopener"><strong><em>solo travelling across the UK</em></strong></a>
                 (and Istanbul).
             </p>
 
             <p>
                 I've written several informal
                 <a href="https://medium.com/@ikramchoudhury0"
-                   target="_blank" rel="noopener">blogs on AI</a>,
+                   target="_blank" rel="noopener"><strong><em>blogs on AI</em></strong></a>,
                 including an overview of my
                 <a href="https://medium.com/@ikramchoudhury0/my-personal-approach-to-research-54579531a3b7"
-                   target="_blank" rel="noopener">research method</a>.
+                   target="_blank" rel="noopener"><strong><em>research method</em></strong></a>.
             </p>
         </section>
 
@@ -115,7 +123,6 @@
 
     </main>
 
-    <!-- Theme switch: Auto / Light / Dark -->
     <script>
         (function () {
             var root    = document.documentElement;
@@ -326,6 +333,7 @@
             .custom-about-main a {
                 color: var(--noir-steel);
                 font-weight: bold;
+                font-style: italic;
                 border-bottom: 1px solid rgba(60, 72, 107, 0.4);
                 text-decoration: none;
                 transition: border-color 0.2s ease;
@@ -410,16 +418,16 @@
 
                                 <h4>Core Focus & Technical Deep Dives</h4>
                                 <ul>
-                                    <li><strong>Engineering Reality Over Theory:</strong> My foundational work stems from an ongoing evolution in how machines see the world—documented in <a href="https://medium.com/@ikramchoudhury0/a-vision-for-a-better-price-an-overview-on-my-journey-into-computer-vision-c8e563b1da7c" target="_blank">my journey into computer vision</a>—which directly drives how I tackle high-performance bottlenecks like <a href="https://medium.com/@ikramchoudhury0/gpu-accelerated-image-shape-analysis-in-python-edge-detection-cbb49350977f" target="_blank">GPU-accelerated image shape analysis</a>.</li>
-                                    <li><strong>Questioning the Defaults:</strong> I constantly look to interrogate standard approaches to see if they actually serve the task at hand. Sometimes that means building specialized workarounds like <a href="https://medium.com/@ikramchoudhury0/the-sahi-polygon-splitter-almost-37e345769562" target="_blank">the SAHI polygon splitter</a>, deciding exactly <a href="https://medium.com/@ikramchoudhury0/how-i-ditched-ious-40d766033268" target="_blank">how I ditched IoUs</a> for more robust custom metrics, or choosing to fundamentally <a href="https://medium.com/@ikramchoudhury0/rethink-human-pose-estimation-cba6752b52fc" target="_blank">rethink human pose estimation</a>.</li>
-                                    <li><strong>Reframing the Problem:</strong> When edge cases hit hard, I rely on mental models that flip the perspective. Applying <a href="https://medium.com/@ikramchoudhury0/the-inverted-problem-254f21f4ede0" target="_blank">the inverted problem</a> helps strip away noise to isolate core algorithmic truths, while drawing cross-domain inspiration from unexpected places—like <a href="https://medium.com/@ikramchoudhury0/nlp-reflections-by-the-bosporus-strait-12b15f91b45f" target="_blank">NLP reflections by the Bosporus Strait</a>—keeps pipelines adaptable.</li>
+                                    <li><strong>Engineering Reality Over Theory:</strong> My foundational work stems from an ongoing evolution in how machines see the world—documented in <a href="https://medium.com/@ikramchoudhury0/a-vision-for-a-better-price-an-overview-on-my-journey-into-computer-vision-c8e563b1da7c" target="_blank"><strong><em>my journey into computer vision</em></strong></a>—which directly drives how I tackle high-performance bottlenecks like <a href="https://medium.com/@ikramchoudhury0/gpu-accelerated-image-shape-analysis-in-python-edge-detection-cbb49350977f" target="_blank"><strong><em>GPU-accelerated image shape analysis</em></strong></a>.</li>
+                                    <li><strong>Questioning the Defaults:</strong> I constantly look to interrogate standard approaches to see if they actually serve the task at hand. Sometimes that means building specialized workarounds like <a href="https://medium.com/@ikramchoudhury0/the-sahi-polygon-splitter-almost-37e345769562" target="_blank"><strong><em>the SAHI polygon splitter</em></strong></a>, deciding exactly <a href="https://medium.com/@ikramchoudhury0/how-i-ditched-ious-40d766033268" target="_blank"><strong><em>how I ditched IoUs</em></strong></a> for more robust custom metrics, or choosing to fundamentally <a href="https://medium.com/@ikramchoudhury0/rethink-human-pose-estimation-cba6752b52fc" target="_blank"><strong><em>rethink human pose estimation</em></strong></a>.</li>
+                                    <li><strong>Reframing the Problem:</strong> When edge cases hit hard, I rely on mental models that flip the perspective. Applying <a href="https://medium.com/@ikramchoudhury0/the-inverted-problem-254f21f4ede0" target="_blank"><strong><em>the inverted problem</em></strong></a> helps strip away noise to isolate core algorithmic truths, while drawing cross-domain inspiration from unexpected places—like <a href="https://medium.com/@ikramchoudhury0/nlp-reflections-by-the-bosporus-strait-12b15f91b45f" target="_blank"><strong><em>NLP reflections by the Bosporus Strait</em></strong></a>—keeps pipelines adaptable.</li>
                                 </ul>
 
                                 <h4>Philosophy & Mindset</h4>
                                 <ul>
-                                    <li><strong>Strategic Deliberation:</strong> Good code requires quiet thought. My <a href="https://medium.com/@ikramchoudhury0/my-personal-approach-to-research-54579531a3b7" target="_blank">personal approach to research</a> prioritizes methodical execution, which often starts with the conscious decision to <a href="https://medium.com/@ikramchoudhury0/let-go-of-the-keyboard-d6a48fc19e9b" target="_blank">let go of the keyboard</a> to map out architecture before writing a single line.</li>
-                                    <li><strong>Introspection & Autonomy:</strong> I believe sustainable research requires room for unstructured, candid reflection—whether capturing raw thoughts on a quiet <a href="https://medium.com/@ikramchoudhury0/sunday-july-something-time-unknown-26430f4eeb2f" target="_blank">Sunday, July something</a>, examining the internal resistance of <a href="https://medium.com/@tnzkqsd/why-fear-89f1eebf97a3" target="_blank">why fear?</a>, or exploring what true creative and technical <a href="https://medium.com/@tnzkqsd/freedom-is-3f50a263c432" target="_blank">freedom is</a>.</li>
-                                    <li><strong>Community & Collaboration:</strong> None of this work happens in a vacuum. Beyond the codebases, I view building robust data ecosystems as a collective effort, offering <a href="https://medium.com/@ikramchoudhury0/a-rallying-call-721a3455b357" target="_blank">a rallying call</a> to foster open, collaborative problem-solving across the industry.</li>
+                                    <li><strong>Strategic Deliberation:</strong> Good code requires quiet thought. My <a href="https://medium.com/@ikramchoudhury0/my-personal-approach-to-research-54579531a3b7" target="_blank"><strong><em>personal approach to research</em></strong></a> prioritizes methodical execution, which often starts with the conscious decision to <a href="https://medium.com/@ikramchoudhury0/let-go-of-the-keyboard-d6a48fc19e9b" target="_blank"><strong><em>let go of the keyboard</em></strong></a> to map out architecture before writing a single line.</li>
+                                    <li><strong>Introspection & Autonomy:</strong> I believe sustainable research requires room for unstructured, candid reflection—whether capturing raw thoughts on a quiet <a href="https://medium.com/@ikramchoudhury0/sunday-july-something-time-unknown-26430f4eeb2f" target="_blank"><strong><em>Sunday, July something</em></strong></a>, examining the internal resistance of <a href="https://medium.com/@tnzkqsd/why-fear-89f1eebf97a3" target="_blank"><strong><em>why fear?</em></strong></a>, or exploring what true creative and technical <a href="https://medium.com/@tnzkqsd/freedom-is-3f50a263c432" target="_blank"><strong><em>freedom is</em></strong></a>.</li>
+                                    <li><strong>Community & Collaboration:</strong> None of this work happens in a vacuum. Beyond the codebases, I view building robust data ecosystems as a collective effort, offering <a href="https://medium.com/@ikramchoudhury0/a-rallying-call-721a3455b357" target="_blank"><strong><em>a rallying call</em></strong></a> to foster open, collaborative problem-solving across the industry.</li>
                                 </ul>
                             </div>
 
@@ -567,6 +575,7 @@
                     <div class="button-container">
                         <a href="https://www.linkedin.com/in/ikram-choudhury-7731921a3/" class="button primary" target="_blank">LinkedIn</a>
                         <a href="mailto:ikramchoudhury0@gmail.com" class="button" target="_blank">Email</a>
+                        <a href="https://github.com/ikram-c" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </div>
             </section>
