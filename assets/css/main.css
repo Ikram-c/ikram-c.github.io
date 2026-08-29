@@ -129,6 +129,27 @@ hr {
     padding: 4rem 1.5rem 3rem;
 }
 
+/* ---------- Site nav ---------- */
+.site-nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.75rem;
+    font-size: 0.9rem;
+}
+.site-nav a {
+    color: var(--muted);
+    border-bottom: 1px solid transparent;
+}
+.site-nav a:hover {
+    color: var(--heading);
+    border-bottom-color: var(--heading);
+}
+.site-nav a.is-current {
+    color: var(--heading);
+    font-weight: 600;
+    border-bottom-color: var(--heading);
+}
+
 /* ---------- Theme switch (segmented control) ---------- */
 .theme-switch {
     position: fixed;

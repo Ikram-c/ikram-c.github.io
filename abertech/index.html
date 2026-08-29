@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AberTech — Ikram Choudhury</title>
+<meta name="description" content="AberTech proof-of-concept demos: cloud-optimised CCTV archival, dashcam frame extraction, geospatial hexagon pipelines, UAV litter counting, and computer-vision tooling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Layout adapted from TemplateMo 616 Split Index; re-themed to match ikram-c.github.io -->
+
+<!-- Apply saved theme before paint to avoid flash (shared with portfolio) -->
+<script>
+    (function () {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') {
+            document.documentElement.setAttribute('data-theme', t);
+        }
+    })();
+</script>
+</head>
+<body>
+
+<!-- Site Header -->
+<header class="site-header">
+  <div class="site-brand">
+    <a class="site-title" data-nav="home">AberTech</a>
+    <div class="site-divider-v"></div>
+    <span class="site-tagline">Computer Vision with Clarity</span>
+  </div>
+  <div class="header-right">
+    <nav class="site-header-nav">
+      <a data-nav="home" class="nav-active">Home</a>
+      <a data-nav="work">Projects</a>
+      <a data-nav="about">About</a>
+      <a data-nav="contact">Contact</a>
+    </nav>
+    <a class="nav-back" href="../">&larr; Main</a>
+    <div class="theme-switch" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-set="auto"  aria-pressed="false">Auto</button>
+        <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-set="dark"  aria-pressed="false">Dark</button>
+    </div>
+  </div>
+</header>
+
+<!-- Main Split -->
+<div class="split-container">
+
+  <!-- LEFT: Swappable Panels -->
+  <div class="left-side">
+
+    <!-- Panel: Home (Splash Section) -->
+    <div class="panel panel-active" id="panel-home">
+      <div class="about-content">
+        <span class="about-label">Welcome</span>
+        <h2 class="about-headline">Proof-of-concept demos, <em>built to ship</em>.</h2>
+        <p class="about-body">
+          AberTech builds cloud-native computer-vision and geospatial pipelines.
+          Explore the Projects tab for five open proof-of-concepts &mdash; from
+          movement-aware CCTV archival with a Google Cloud deployable demo to
+          UAV litter counting &mdash; each backed by a public repository.
+        </p>
+        <p class="about-body">
+          It began as "Broad CoCo": a search for one standard unifying QC and
+          pre-processing across vision projects. The approach owes more to 3D
+          animation on low-end hardware than to textbooks &mdash; render only
+          what the viewer needs, know your light sources, and treat memory as
+          scarce, because it is.
+        </p>
+      </div>
+    </div>
+
+    <!-- Panel: Projects -->
+    <div class="panel" id="panel-work">
+      <div class="panel-header">
+        <span>Proof-of-Concept Demos &mdash; 2024 / 2026</span>
+      </div>
+      <ul class="project-list" id="projectList">
+        <li class="project-item" data-index="0">
+          <a href="https://github.com/Ikram-c/Cloud_optimised_CCTV" class="project-link" target="_blank" rel="noopener">
+            <span class="project-number">01</span>
+            <span class="project-title">Cloud-Optimised CCTV</span>
+            <span class="project-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            <span class="project-category">Cloud Archival &middot; GCP Demo</span>
+          </a>
+        </li>
+        <li class="project-item" data-index="1">
+          <a href="https://github.com/Ikram-c/Cloud_Dashcam_POC" class="project-link" target="_blank" rel="noopener">
+            <span class="project-number">02</span>
+            <span class="project-title">Cloud Dashcam</span>
+            <span class="project-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            <span class="project-category">Vehicle Vision &middot; Telemetry</span>
+          </a>
+        </li>
+        <li class="project-item" data-index="2">
+          <a href="https://github.com/Ikram-c/hexcover" class="project-link" target="_blank" rel="noopener">
+            <span class="project-number">03</span>
+            <span class="project-title">HexCover</span>
+            <span class="project-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            <span class="project-category">Geospatial &middot; EO Scenes</span>
+          </a>
+        </li>
+        <li class="project-item" data-index="3">
+          <a href="https://github.com/Ikram-c/UAV_unsupervised_litter_counter" class="project-link" target="_blank" rel="noopener">
+            <span class="project-number">04</span>
+            <span class="project-title">UAV Litter Counter</span>
+            <span class="project-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            <span class="project-category">UAV &middot; Unsupervised CV</span>
+          </a>
+        </li>
+        <li class="project-item" data-index="4">
+          <a href="https://github.com/Ikram-c/vision-toolkit" class="project-link" target="_blank" rel="noopener">
+            <span class="project-number">05</span>
+            <span class="project-title">Vision Toolkit</span>
+            <span class="project-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            <span class="project-category">CV Monorepo &middot; Tooling</span>
+          </a>
+        </li>
+      </ul>
+      <div class="panel-footer">
+        <span>5 Projects</span>
+        <span>Hover to preview &middot; Click to open repo</span>
+      </div>
+    </div>
+
+    <!-- Panel: About -->
+    <div class="panel" id="panel-about">
+      <div class="about-content">
+        <span class="about-label">About AberTech</span>
+        <h2 class="about-headline">You are already giants. AI should <em>stand on your shoulders</em>.</h2>
+        <p class="about-body">
+          Named for a Welsh valley town that offered a moment of total clarity,
+          AberTech is hired for one job: making computer vision serve the systems
+          you already run. We don't need more data &mdash; we need better
+          examinations of data. Every engagement starts with your metadata,
+          strips out what never needed analysing &mdash; respecting your carbon
+          footprint as much as your budget &mdash; and leaves the final 20%
+          open-ended so your IT and security teams finish it on their terms.
+          Proof-of-concepts run on mock data first, because a partner who can't
+          mock your data doesn't understand your objectives. AI is not about
+          replacement &mdash; it's about adding to a pre-existing system, without
+          restructuring your business to meet a buzzword. And for environmental
+          work, one rule is absolute: it makes no sense to analyse the
+          environment by environmentally unsustainable means.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Open POCs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Cloud-Deployable Demos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Domains: Vision / Geo / Cloud</span>
+          </div>
+        </div>
+        <div class="about-method">
+          <span class="method-label">The AberTech Method</span>
+          <ol>
+            <li>Deduce what data is actually relevant &mdash; and what the raw mock data should be.</li>
+            <li>Pre-compute whatever the metadata already gives you; estimate regions of interest mathematically before reaching for a CNN.</li>
+            <li>Describe every vision task in plain photographic properties &mdash; brightness, texture, line composition &mdash; so sanity checks stay honest.</li>
+            <li>Isolate control, independent and dependent variables between frames, noting what is stationary and what moves.</li>
+            <li>Shrink the search space before any model runs &mdash; remove the regions where the answer cannot physically be, as in the offshore wind-farm detection model.</li>
+            <li>Exploit material physics &mdash; noise signatures, reflectance, and the manufactured simplicity that separates synthetics from nature.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel: Contact -->
+    <div class="panel" id="panel-contact">
+      <div class="contact-content">
+        <span class="contact-label">Get in Touch</span>
+        <h2 class="contact-headline">Start a conversation.</h2>
+        <div class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="hello@example.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="button" class="form-submit" onclick="window.location.href='mailto:ikramchoudhury0@gmail.com?subject=AberTech%20enquiry'">Send Message</button>
+        </div>
+        <div class="contact-details">
+          <span>Direct</span>
+          <a href="mailto:ikramchoudhury0@gmail.com">ikramchoudhury0@gmail.com</a>
+          <span>Code</span>
+          <a href="https://github.com/Ikram-c" target="_blank" rel="noopener">github.com/Ikram-c</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Divider -->
+  <div class="split-divider"></div>
+
+  <!-- RIGHT: The Canvas -->
+  <div class="canvas-side" id="canvasSide">
+
+    <!-- Home context card (shown on load via JS init) -->
+    <div class="canvas-context" data-context="home">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- aperture / lens motif -->
+          <circle class="ln" cx="170" cy="110" r="72"/>
+          <circle class="ac" cx="170" cy="110" r="46"/>
+          <circle class="fa" cx="170" cy="110" r="6"/>
+          <line class="ln" x1="170" y1="14" x2="170" y2="46"/>
+          <line class="ln" x1="170" y1="174" x2="170" y2="206"/>
+          <line class="ln" x1="74" y1="110" x2="106" y2="110"/>
+          <line class="ln" x1="234" y1="110" x2="266" y2="110"/>
+          <line class="ln" x1="112" y1="52" x2="132" y2="72"/>
+          <line class="ln" x1="208" y1="148" x2="228" y2="168"/>
+          <line class="ln" x1="228" y1="52" x2="208" y2="72"/>
+          <line class="ln" x1="132" y1="148" x2="112" y2="168"/>
+        </svg>
+      </div>
+      <div class="canvas-context-overlay">
+        <p class="canvas-context-quote">"AI is about prediction &mdash; how can you achieve that if you can't do the starting data entry process?"</p>
+        <span class="canvas-context-attr">&mdash; A lesson carried from British Airways</span>
+      </div>
+    </div>
+
+    <!-- Placeholder (Hidden on Home, Used for Projects) -->
+    <div class="canvas-placeholder" id="placeholder">
+      <div class="placeholder-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 2v4m0 12v4m-10-10h4m12 0h4m-3.3-6.7-2.8 2.8m-5.8 5.8-2.8 2.8m0-11.3 2.8 2.8m5.8 5.8 2.8 2.8"/>
+        </svg>
+      </div>
+      <span class="placeholder-text">Select a project</span>
+    </div>
+
+    <!-- Project preview cards -->
+    <div class="canvas-image" data-slide="0">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- CCTV camera + chunk grid -->
+          <rect class="ac" x="36" y="46" width="76" height="40" rx="6"/>
+          <line class="ac" x1="112" y1="58" x2="140" y2="48"/>
+          <line class="ac" x1="112" y1="74" x2="140" y2="84"/>
+          <line class="ln" x1="74" y1="86" x2="74" y2="116"/>
+          <line class="ln" x1="56" y1="116" x2="92" y2="116"/>
+          <!-- chunked archive grid, some chunks "queried" -->
+          <g class="ln">
+            <rect x="170" y="42" width="28" height="28"/><rect x="202" y="42" width="28" height="28"/><rect x="234" y="42" width="28" height="28"/><rect x="266" y="42" width="28" height="28"/>
+            <rect x="170" y="74" width="28" height="28"/><rect x="202" y="74" width="28" height="28"/><rect x="234" y="74" width="28" height="28"/><rect x="266" y="74" width="28" height="28"/>
+            <rect x="170" y="106" width="28" height="28"/><rect x="202" y="106" width="28" height="28"/><rect x="234" y="106" width="28" height="28"/><rect x="266" y="106" width="28" height="28"/>
+          </g>
+          <rect class="fa" x="202" y="74" width="28" height="28"/>
+          <rect class="fm" x="234" y="106" width="28" height="28"/>
+          <rect class="fm" x="266" y="42" width="28" height="28"/>
+          <text class="txt" x="36" y="170">week of footage</text>
+          <text class="txt" x="170" y="170">only queried chunks download</text>
+        </svg>
+      </div>
+      <div class="canvas-caption">
+        <div class="canvas-caption-title">Cloud-Optimised CCTV (cctv_zarr)</div>
+        <div class="canvas-caption-desc">Search a week of footage, download only the minutes you need. Movement-aware OME-Zarr archival with chunk-level cloud query &mdash; Google Cloud deployable demo.</div>
+      </div>
+    </div>
+    <div class="canvas-image" data-slide="1">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- road perspective + film strip of kept frames -->
+          <line class="ln" x1="60" y1="180" x2="150" y2="60"/>
+          <line class="ln" x1="280" y1="180" x2="190" y2="60"/>
+          <line class="ac" x1="170" y1="180" x2="170" y2="140"/>
+          <line class="ac" x1="170" y1="120" x2="170" y2="96"/>
+          <line class="ac" x1="170" y1="82" x2="170" y2="66"/>
+          <line class="ln" x1="140" y1="60" x2="200" y2="60"/>
+          <!-- frames -->
+          <g class="ln">
+            <rect x="52" y="24" width="40" height="26" rx="3"/>
+            <rect x="100" y="24" width="40" height="26" rx="3"/>
+            <rect x="196" y="24" width="40" height="26" rx="3"/>
+            <rect x="244" y="24" width="40" height="26" rx="3"/>
+          </g>
+          <rect class="ac" x="148" y="20" width="40" height="26" rx="3"/>
+          <line class="ln" x1="106" y1="44" x2="134" y2="30"/>
+          <line class="ln" x1="250" y1="44" x2="278" y2="30"/>
+          <text class="txt" x="52" y="205">quality-gated frame extraction</text>
+        </svg>
+      </div>
+      <div class="canvas-caption">
+        <div class="canvas-caption-title">Cloud Dashcam POC</div>
+        <div class="canvas-caption-desc">Keep only the frames worth keeping. Quality-gated, illumination-aware, coverage-chunked frame extraction from vehicle-mounted video.</div>
+      </div>
+    </div>
+    <div class="canvas-image" data-slide="2">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- H3 hexagon tessellation -->
+          <g class="ln">
+            <polygon points="170,30 204,50 204,90 170,110 136,90 136,50"/>
+            <polygon points="238,70 272,90 272,130 238,150 204,130 204,90"/>
+            <polygon points="102,70 136,90 136,130 102,150 68,130 68,90"/>
+            <polygon points="170,110 204,130 204,170 170,190 136,170 136,130"/>
+          </g>
+          <polygon class="ac" points="238,70 272,90 272,130 238,150 204,130 204,90"/>
+          <polygon class="fm" points="170,110 204,130 204,170 170,190 136,170 136,130"/>
+          <circle class="fa" cx="238" cy="110" r="4"/>
+          <text class="txt" x="68" y="208">h3 coverage &middot; eo scene availability</text>
+        </svg>
+      </div>
+      <div class="canvas-caption">
+        <div class="canvas-caption-title">HexCover</div>
+        <div class="canvas-caption-desc">Turn any named area into an answerable map. H3 hexagon covering, EO scene availability, WEBKNOSSOS visualisation &mdash; retargets via YAML alone.</div>
+      </div>
+    </div>
+    <div class="canvas-image" data-slide="3">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- quadcopter + detections below -->
+          <circle class="ln" cx="120" cy="50" r="16"/>
+          <circle class="ln" cx="220" cy="50" r="16"/>
+          <line class="ac" x1="136" y1="50" x2="204" y2="50"/>
+          <rect class="ac" x="160" y="42" width="20" height="16" rx="3"/>
+          <line class="ln" x1="170" y1="58" x2="170" y2="80"/>
+          <!-- field of view -->
+          <line class="ln" x1="170" y1="80" x2="90" y2="170"/>
+          <line class="ln" x1="170" y1="80" x2="250" y2="170"/>
+          <line class="ln" x1="90" y1="170" x2="250" y2="170"/>
+          <!-- litter detections -->
+          <circle class="fa" cx="128" cy="150" r="4"/>
+          <circle class="fa" cx="176" cy="160" r="4"/>
+          <circle class="fa" cx="210" cy="145" r="4"/>
+          <circle class="fm" cx="150" cy="135" r="3"/>
+          <circle class="fm" cx="196" cy="128" r="3"/>
+          <text class="txt" x="90" y="200">unsupervised counting &middot; no labels</text>
+        </svg>
+      </div>
+      <div class="canvas-caption">
+        <div class="canvas-caption-title">UAV Unsupervised Litter Counter</div>
+        <div class="canvas-caption-desc">Count litter from drone imagery without labelling a dataset. Unsupervised counting via OpenDroneMap overlap pairing &mdash; separating synthetics from nature by shape, because nature has never been composed of simple objects. Counting is the start; the goal is understanding the human behaviour behind where litter lands.</div>
+      </div>
+    </div>
+    <div class="canvas-image" data-slide="4">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- monorepo: modules feeding one box -->
+          <g class="ln">
+            <rect x="40" y="30" width="54" height="30" rx="4"/>
+            <rect x="40" y="72" width="54" height="30" rx="4"/>
+            <rect x="40" y="114" width="54" height="30" rx="4"/>
+            <rect x="40" y="156" width="54" height="30" rx="4"/>
+          </g>
+          <line class="ln" x1="94" y1="45" x2="150" y2="96"/>
+          <line class="ln" x1="94" y1="87" x2="150" y2="102"/>
+          <line class="ln" x1="94" y1="129" x2="150" y2="114"/>
+          <line class="ln" x1="94" y1="171" x2="150" y2="120"/>
+          <rect class="ac" x="150" y="78" width="110" height="60" rx="6"/>
+          <line class="ac" x1="260" y1="108" x2="296" y2="108"/>
+          <polyline class="ac" points="288,100 296,108 288,116"/>
+          <text class="txt" x="158" y="112">vision-toolkit</text>
+          <text class="txt" x="40" y="208">11 codebases &middot; one monorepo</text>
+        </svg>
+      </div>
+      <div class="canvas-caption">
+        <div class="canvas-caption-title">Vision Toolkit</div>
+        <div class="canvas-caption-desc">Skip a year of dataset plumbing. Eleven CV / geospatial / dataset codebases consolidated into one monorepo.</div>
+      </div>
+    </div>
+
+    <!-- About context card -->
+    <div class="canvas-context" data-context="about">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- bounded, layered system -->
+          <rect class="ln" x="70" y="40" width="200" height="140" rx="8"/>
+          <rect class="ln" x="90" y="60" width="160" height="100" rx="6"/>
+          <rect class="ac" x="110" y="80" width="120" height="60" rx="4"/>
+          <line class="ln" x1="70" y1="110" x2="90" y2="110"/>
+          <line class="ln" x1="250" y1="110" x2="270" y2="110"/>
+          <circle class="fa" cx="170" cy="110" r="5"/>
+          <text class="txt" x="70" y="200">config-driven &middot; offline-testable &middot; bounded</text>
+        </svg>
+      </div>
+      <div class="canvas-context-overlay">
+        <p class="canvas-context-quote">"We don't need more data, we need better examinations of data."</p>
+        <span class="canvas-context-attr">&mdash; AberTech ethos</span>
+      </div>
+    </div>
+
+    <!-- Contact context card -->
+    <div class="canvas-context" data-context="contact">
+      <div class="canvas-art" aria-hidden="true">
+        <svg viewBox="0 0 340 220">
+          <!-- envelope -->
+          <rect class="ln" x="90" y="60" width="160" height="100" rx="8"/>
+          <polyline class="ac" points="90,64 170,124 250,64"/>
+          <line class="ln" x1="90" y1="156" x2="146" y2="112"/>
+          <line class="ln" x1="250" y1="156" x2="194" y2="112"/>
+          <circle class="fa" cx="248" cy="62" r="6"/>
+          <text class="txt" x="90" y="190">ikramchoudhury0@gmail.com</text>
+        </svg>
+      </div>
+      <div class="canvas-context-overlay">
+        <p class="canvas-context-quote">"The world has plenty of coders &mdash; we need more scientists."</p>
+        <span class="canvas-context-attr">&mdash; AberTech</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Site Footer -->
+<footer class="site-footer">
+  <span>&copy; 2026 AberTech &middot; Ikram Choudhury</span>
+  <div class="footer-links">
+    <a href="../">Portfolio</a>
+    <span class="footer-dot">&middot;</span>
+    <a href="https://github.com/Ikram-c/POC_Multiservice_Landing" target="_blank" rel="noopener">Source</a>
+    <span class="footer-dot">&middot;</span>
+    <a href="https://github.com/Ikram-c" target="_blank" rel="noopener">GitHub</a>
+    <span class="footer-dot">&middot;</span>
+    <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- Theme switch: Auto / Light / Dark (same behaviour + storage key as portfolio) -->
+<script>
+    (function () {
+        var root    = document.documentElement;
+        var buttons = document.querySelectorAll('.theme-switch button[data-theme-set]');
+
+        function current() {
+            var v = root.getAttribute('data-theme');
+            return (v === 'light' || v === 'dark') ? v : 'auto';
+        }
+
+        function apply(state) {
+            if (state === 'auto') {
+                root.removeAttribute('data-theme');
+                localStorage.removeItem('theme');
+            } else {
+                root.setAttribute('data-theme', state);
+                localStorage.setItem('theme', state);
+            }
+            buttons.forEach(function (btn) {
+                var active = btn.dataset.themeSet === state;
+                btn.classList.toggle('is-active', active);
+                btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+            });
+        }
+
+        apply(current());
+
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                apply(btn.dataset.themeSet);
+            });
+        });
+    })();
+</script>
+
+<!-- Swipe Gesture Recognition -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = ['home', 'work', 'about', 'contact'];
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    const handleSwipe = () => {
+      const currentActive = document.querySelector('.site-header-nav a.nav-active');
+      if (!currentActive) return;
+
+      const currentSection = currentActive.getAttribute('data-nav');
+      let currentIndex = sections.indexOf(currentSection);
+
+      const swipeThreshold = 50;
+
+      if (touchstartX - touchendX > swipeThreshold) {
+        if (currentIndex < sections.length - 1) {
+          triggerNav(sections[currentIndex + 1]);
+        }
+      } else if (touchendX - touchstartX > swipeThreshold) {
+        if (currentIndex > 0) {
+          triggerNav(sections[currentIndex - 1]);
+        }
+      }
+    };
+
+    const swipeContainer = document.querySelector('.split-container');
+
+    swipeContainer.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    swipeContainer.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function triggerNav(targetNav) {
+      const navLink = document.querySelector(`.site-header-nav a[data-nav="${targetNav}"]`);
+      if (navLink) {
+        navLink.click();
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
