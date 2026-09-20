@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutting Room Floor — Ikram Choudhury</title>
+    <!-- Imports your main stylesheet for base variables and typography -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Imports the specific styles for this section -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch">
+        <button id="theme-toggle">Light</button>
+    </div>
+
+    <main class="wrap">
+        <nav class="site-nav">
+            <a href="../index.html">Home</a>
+            <a href="../portfolio/index.html">Portfolio</a>
+            <a href="index.html" class="is-current">Cutting Room Floor</a>
+        </nav>
+
+        <header class="intro-head">
+            <div>
+                <h1>Cutting Room Floor</h1>
+                <p class="subtitle">Handwritten AI drafts, system architectures, and raw thoughts exported straight from the reMarkable Pro.</p>
+            </div>
+        </header>
+
+        <hr>
+
+        <section class="draft-grid">
+            <!-- Draft Item 1 -->
+            <article class="draft-item">
+                <img src="placeholder-1.png" alt="Placeholder-1" class="draft-thumb" data-highres="placeholder-1-highres.png">
+                <div class="draft-meta">
+                    <h3>Placeholder-1</h3>
+                    <p class="date">Placeholder-1</p>
+                </div>
+            </article>
+
+            <!-- Draft Item 2 -->
+            <article class="draft-item">
+                <img src="placeholder-2.png" alt="placeholder-2" class="draft-thumb" data-highres="placeholder-2-highres.png">
+                <div class="draft-meta">
+                    <h3>Placeholder-2</h3>
+                    <p class="date">Placeholder-2</p>
+                </div>
+            </article>
+
+            <!-- Draft Item 3 -->
+            <article class="draft-item">
+                <img src="placeholder-3.png" alt="placeholder-3" class="draft-thumb" data-highres="placeholder-3-highres.png">
+                <div class="draft-meta">
+                    <h3>Placeholder-3</h3>
+                    <p class="date">Placeholder-3</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Modal for expanding handwritten notes -->
+    <div id="draft-modal" class="modal" aria-hidden="true">
+        <button class="modal-close" aria-label="Close modal">×</button>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="Expanded handwritten draft">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
