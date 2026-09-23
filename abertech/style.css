@@ -1,12 +1,10 @@
 /* =========================================================
    AberTech — POC landing page
-   Re-themed to match ikram-c.github.io:
+   Re-themed to match portfolio:
    Bricolage Grotesque, shared light/dark palette,
    same Auto/Light/Dark switch (shared localStorage key).
    Split-panel layout adapted from TemplateMo 616.
    ========================================================= */
-
-/* ---------- Theme variables (mirrors portfolio main.css) ---------- */
 
 :root {
     --bg: #ffffff;
@@ -61,7 +59,6 @@
 }
 
 /* ---------- Reset / base ---------- */
-
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -88,7 +85,6 @@ body {
 }
 
 /* ---------- Site header ---------- */
-
 .site-header {
     position: fixed;
     top: 0;
@@ -169,22 +165,7 @@ body {
     background: var(--switch-active-bg);
 }
 
-.nav-back {
-    font-size: 0.8rem;
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    white-space: nowrap;
-    transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.nav-back:hover {
-    color: var(--accent-hover);
-    border-bottom-color: var(--accent-hover);
-}
-
-/* ---------- Theme switch (same control as portfolio) ---------- */
-
+/* ---------- Theme switch ---------- */
 .theme-switch {
     display: inline-flex;
     background: var(--bg);
@@ -220,7 +201,6 @@ body {
 }
 
 /* ---------- Site footer ---------- */
-
 .site-footer {
     position: fixed;
     bottom: 0;
@@ -261,7 +241,6 @@ body {
 }
 
 /* ---------- Main split layout ---------- */
-
 .split-container {
     display: flex;
     height: 100vh;
@@ -280,7 +259,6 @@ body {
 }
 
 /* ══════════ LEFT SIDE — panels ══════════ */
-
 .left-side {
     width: 50vw;
     position: relative;
@@ -311,10 +289,7 @@ body {
 }
 
 /* ── Panel: projects ── */
-
-.panel-header {
-    padding: 0 3rem 1.25rem;
-}
+.panel-header { padding: 0 3rem 1.25rem; }
 
 .panel-header span {
     font-size: 0.72rem;
@@ -348,9 +323,7 @@ body {
 }
 
 .project-item:hover::before,
-.project-item.active::before {
-    transform: scaleY(1);
-}
+.project-item.active::before { transform: scaleY(1); }
 
 .project-link {
     display: flex;
@@ -365,9 +338,7 @@ body {
 }
 
 .project-item:hover .project-title,
-.project-item.active .project-title {
-    color: var(--accent);
-}
+.project-item.active .project-title { color: var(--accent); }
 
 .project-number {
     font-size: 0.72rem;
@@ -436,15 +407,10 @@ body {
     color: var(--muted);
 }
 
-/* ── Panels: home / about ── */
+/* ── Panels: home / about / contact ── */
+.about-content, .contact-content { padding: 2rem 3rem; }
 
-.about-content,
-.contact-content {
-    padding: 2rem 3rem;
-}
-
-.about-label,
-.contact-label {
+.about-label, .contact-label {
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -454,8 +420,7 @@ body {
     display: block;
 }
 
-.about-headline,
-.contact-headline {
+.about-headline, .contact-headline {
     font-weight: 700;
     font-size: clamp(1.7rem, 2.8vw, 2.5rem);
     letter-spacing: -0.015em;
@@ -465,7 +430,7 @@ body {
     max-width: 460px;
 }
 
-.about-headline em {
+.about-headline em, .contact-headline em {
     font-style: italic;
     color: var(--accent);
 }
@@ -475,7 +440,7 @@ body {
     line-height: 1.7;
     color: var(--text);
     max-width: 430px;
-    margin-bottom: 2.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .about-stats {
@@ -541,76 +506,6 @@ body {
     font-weight: 600;
 }
 
-/* ── Panel: contact ── */
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-    max-width: 400px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-}
-
-.form-group label {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-.form-group input,
-.form-group textarea {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--border);
-    padding: 0.55rem 0;
-    font-family: var(--font-base);
-    font-size: 0.9rem;
-    color: var(--text);
-    outline: none;
-    transition: border-color 0.3s ease;
-    resize: none;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-bottom-color: var(--accent);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: var(--muted);
-    opacity: 0.6;
-}
-
-.form-group textarea { min-height: 80px; }
-
-.form-submit {
-    align-self: flex-start;
-    margin-top: 0.5rem;
-    padding: 0.65rem 2.25rem;
-    background: var(--switch-active-bg);
-    color: var(--switch-active-text);
-    border: none;
-    border-radius: 999px;
-    font-family: var(--font-base);
-    font-weight: 600;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: background 0.25s ease, color 0.25s ease;
-}
-
-.form-submit:hover {
-    background: var(--accent);
-    color: #ffffff;
-}
-
 .contact-details {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -645,7 +540,6 @@ body {
 }
 
 /* ══════════ RIGHT SIDE — canvas ══════════ */
-
 .canvas-side {
     width: 50vw;
     position: relative;
@@ -697,10 +591,7 @@ body {
     color: var(--muted);
 }
 
-/* Shared card style for project previews + context cards */
-
-.canvas-image,
-.canvas-context {
+.canvas-image, .canvas-context {
     position: absolute;
     inset: 2rem;
     display: flex;
@@ -717,8 +608,7 @@ body {
     z-index: 0;
 }
 
-.canvas-image.visible,
-.canvas-context.visible {
+.canvas-image.visible, .canvas-context.visible {
     opacity: 1;
     transform: scale(1);
     z-index: 2;
@@ -740,7 +630,6 @@ body {
     max-height: 100%;
 }
 
-/* SVG illustration helpers — colours follow the theme */
 .canvas-art .ln  { stroke: var(--muted);  fill: none; stroke-width: 1.2; }
 .canvas-art .ac  { stroke: var(--accent); fill: none; stroke-width: 1.6; }
 .canvas-art .fa  { fill: var(--accent);   stroke: none; opacity: 0.85; }
@@ -753,8 +642,7 @@ body {
     text-transform: uppercase;
 }
 
-.canvas-caption,
-.canvas-context-overlay {
+.canvas-caption, .canvas-context-overlay {
     border-top: 1px solid var(--border);
     padding: 1.25rem 1.5rem;
     flex-shrink: 0;
@@ -783,17 +671,6 @@ body {
     max-width: 400px;
 }
 
-.canvas-context-attr {
-    display: block;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-top: 0.7rem;
-}
-
-/* ---------- Animations ---------- */
-
 @keyframes fadeSlideUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -804,7 +681,6 @@ body {
 }
 
 /* ---------- Mobile ---------- */
-
 @media (max-width: 900px) {
     body {
         overflow-y: auto;
@@ -820,18 +696,9 @@ body {
     }
 
     .site-tagline { display: none; }
-
     .header-right { gap: 0.75rem; }
-
-    .site-header-nav a {
-        font-size: 0.72rem;
-        padding: 0.25rem 0.5rem;
-    }
-
-    .theme-switch button {
-        padding: 0.2rem 0.55rem;
-        font-size: 0.68rem;
-    }
+    .site-header-nav a { font-size: 0.72rem; padding: 0.25rem 0.5rem; }
+    .theme-switch button { padding: 0.2rem 0.55rem; font-size: 0.68rem; }
 
     .site-footer {
         position: relative;
@@ -855,42 +722,24 @@ body {
         position: relative;
     }
 
-    .panel {
-        position: relative;
-        display: none;
-    }
-
+    .panel { position: relative; display: none; }
     .panel.panel-active { display: flex; }
 
-    .panel-header,
-    .panel-footer {
+    .panel-header, .panel-footer {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
 
     .project-link { padding: 1rem 1.25rem; }
-
     .project-title { font-size: clamp(1.1rem, 5vw, 1.5rem); }
-
     .project-category { display: none; }
 
-    .about-content,
-    .contact-content { padding: 1.5rem 1.25rem; }
-
+    .about-content, .contact-content { padding: 1.5rem 1.25rem; }
     .about-stats { gap: 1.75rem; }
 
-    .split-divider {
-        width: 100%;
-        height: 1px;
-    }
+    .split-divider { width: 100%; height: 1px; }
 
-    .canvas-side {
-        width: 100%;
-        min-height: 50vh;
-    }
-
-    .canvas-image,
-    .canvas-context { inset: 1rem; }
-
+    .canvas-side { width: 100%; min-height: 50vh; }
+    .canvas-image, .canvas-context { inset: 1rem; }
     .canvas-art { padding: 1.5rem; }
 }
