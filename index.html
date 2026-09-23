@@ -7,10 +7,77 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
-          rel="stylesheet" />
+    <!-- Replaced Bricolage Grotesque with Inter for a formal, consistent, and highly readable technical aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Explicit Typography Rules to Ensure Distinct Hierarchy -->
+    <style>
+        /* Base typography rules */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            line-height: 1.65;
+            font-size: 16px;
+        }
+
+        /* Enforce same font family for headings but change structural properties */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: inherit;
+        }
+
+        /* Main Title: Heavy, tight letter spacing for impact */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.2em;
+        }
+
+        /* Section Headings: Prominent but secondary */
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+            margin-top: 1.5em;
+            margin-bottom: 0.75em;
+        }
+
+        /* Subheadings: Structured and clean */
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+            margin-top: 1.25em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Professional Title styling */
+        .intro p:first-of-type {
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            margin-bottom: 2em;
+        }
+
+        /* Body text spacing */
+        p, ul {
+            margin-bottom: 1.25em;
+        }
+        
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        /* Bolds should pop nicely against the 400-weight body text */
+        strong {
+            font-weight: 600;
+        }
+    </style>
 
     <!-- Apply saved theme before paint to avoid flash -->
     <script>
@@ -34,7 +101,7 @@
 
         <nav class="site-nav" aria-label="Site">
             <a href="./" class="is-current" aria-current="page">Home</a>
-            <a href="abertech/">AberTech POCs</a>
+            <a href="abertech/">AberTech</a>
             <a href="./cutting-room-floor/index.html">Cutting Room Floor</a>
         </nav>
 
@@ -48,21 +115,21 @@
 
             <h3>Professional Background</h3>
             <ul>
-                <li><strong>Focus Area:</strong> Computer vision, Earth observation, and scalable geospatial models.</li>
-                <li><strong>Cefas (Recent Work):</strong> Programmed end-to-end MLOps pipelines for terabyte/petabyte-scale marine datasets. Overhauled the UK's Benthic AI litter project, presented at the <a href="https://www.ices.dk/events/asc/2024/Documents/ASC%202024%20-%20Theme%20session%20J%20report.pdf" target="_blank" rel="noopener">ICES conference</a>, and implemented RAG, NLP, and DAG models for causal analysis.</li>
-                <li><strong>British Airways (Previous Work):</strong> Worked as a <a href="https://www.linkedin.com/posts/data-consultants-datagrad-share-6949708210727473152-i5Ur" target="_blank" rel="noopener">Data Engineer Consultant</a>, writing production flight analysis code.</li>
+                <li><strong>Focus Area:</strong> <strong>Computer vision</strong>, <strong>Earth observation</strong>, and <strong>scalable geospatial models</strong>.</li>
+                <li><strong>Cefas (Recent Work):</strong> Programmed <strong>end-to-end MLOps pipelines</strong> for <strong>terabyte/petabyte-scale</strong> marine datasets. Overhauled the UK's <strong>Benthic AI litter project</strong>, presented at the <a href="https://www.ices.dk/events/asc/2024/Documents/ASC%202024%20-%20Theme%20session%20J%20report.pdf" target="_blank" rel="noopener">ICES conference</a>, and implemented <strong>RAG, NLP, and DAG models</strong> for causal analysis.</li>
+                <li><strong>British Airways (Previous Work):</strong> Worked as a <a href="https://www.linkedin.com/posts/data-consultants-datagrad-share-6949708210727473152-i5Ur" target="_blank" rel="noopener">Data Engineer Consultant</a>, writing <strong>production flight analysis code</strong>.</li>
             </ul>
 
             <h3>Education</h3>
             <ul>
                 <li><a href="https://www.linkedin.com/posts/ikram-choudhury_the-cert-finally-came-through-having-the-activity-6977391955106263040-as8d" target="_blank" rel="noopener"><strong>MSc in Space Engineering</strong></a> & <a href="https://www.linkedin.com/posts/ikram-choudhury_my-degree-finally-came-in-the-post-i-can-activity-6722107934064680960-Lpxp" target="_blank" rel="noopener"><strong>BEng in Aerospace Engineering</strong></a>.</li>
-                <li>Technical foundation built on satellite radar data and UAV aerodynamics.</li>
+                <li>Technical foundation built on <strong>satellite radar data</strong> and <strong>UAV aerodynamics</strong>.</li>
             </ul>
             
             <h3>Hobbies & Interests</h3>
             <ul>
-                <li>UI design, 3D animation, and CAD.</li>
-                <li>Writing <a href="https://medium.com/@ikramchoudhury0" target="_blank" rel="noopener">informal blogs on AI</a>, documenting <a href="https://medium.com/@ikramchoudhury0/my-personal-approach-to-research-54579531a3b7" target="_blank" rel="noopener">research methods</a>, and solo traveling across the UK and abroad.</li>
+                <li><strong>UI design</strong>, <strong>3D animation</strong>, and <strong>CAD</strong>.</li>
+                <li>Writing <a href="https://medium.com/@ikramchoudhury0" target="_blank" rel="noopener">informal blogs on AI</a>, documenting <a href="https://medium.com/@ikramchoudhury0/my-personal-approach-to-research-54579531a3b7" target="_blank" rel="noopener">research methods</a>, and <strong>solo traveling</strong> across the UK and abroad.</li>
             </ul>
         </section>
 
@@ -70,15 +137,25 @@
             <h2>Exploring the Site</h2>
             <ul>
                 <li>
-                    <strong><a href="abertech/">AberTech POCs</a>:</strong> Foundational AI proofs of concept aimed at assisting mountain search and rescue missions.
+                    <strong><a href="abertech/">AberTech</a>:</strong> A suite of <strong>three fully functional, commercially viable applications</strong>. When unified through a central <strong>orchestration layer</strong>, they create a comprehensive system designed to <strong>assist mountain search and rescue missions</strong> and <strong>save lives</strong>.
                 </li>
                 <li>
-                    <strong><a href="./cutting-room-floor/index.html">The Cutting Room Floor</a>:</strong> A scrapbook of draft notes, algebraic breakdowns, and experimental ML code (e.g., NLP whitespace analysis).
+                    <strong><a href="./cutting-room-floor/index.html">The Cutting Room Floor</a>:</strong> A scrapbook of draft notes, <strong>algebraic breakdowns</strong>, and <strong>experimental ML code</strong> (e.g., NLP whitespace analysis).
                 </li>
                 <li>
-                    <strong>Cloud-DashCam-POC:</strong> Ongoing personal work on cloud-based video analysis architectures.
+                    <strong>Cloud-DashCam:</strong> Ongoing personal work on <strong>cloud-based video analysis architectures</strong>.
                 </li>
             </ul>
+        </section>
+
+        <section class="optimization">
+            <h2>Optimization & Hardware Interoperability</h2>
+            <p>
+                <strong>Memory utilization</strong> and <strong>garbage collection</strong> are persistent bottlenecks in Python-based computer vision pipelines. To build <strong>cost-effective, hardware-agnostic solutions</strong> that don't rely strictly on Nvidia GPUs, I leverage <strong>C++ interfaces</strong> like the <strong>Vulkan API</strong> and <strong>OpenCL</strong>. 
+            </p>
+            <p>
+                A practical example is <a href="https://github.com/Ikram-c/CompareCompress" target="_blank" rel="noopener"><strong>CompareCompress</strong></a>—a single-day build of an image compression comparer that achieves <strong>high-speed performance on legacy hardware</strong> (a 2017 MacBook Air) with minimal overhead.
+            </p>
         </section>
 
         <hr />
@@ -136,4 +213,3 @@
 
 </body>
 </html>
-
