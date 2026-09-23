@@ -1,5 +1,5 @@
-/* AberTech — panel navigation & project previews
-   Adapted from TemplateMo 616 Split Index.
+/* 
+   AberTech — panel navigation & project previews
    Project links open their GitHub repositories.
    Touch devices: first tap previews a project, second tap opens the repo.
 */
@@ -13,8 +13,7 @@ const placeholder = document.getElementById('placeholder');
 let currentPanel = 'home';
 let currentSlide = -1;
 
-// Initial state: Home panel is active in the HTML, so show the home
-// context card and hide the "Select a project" placeholder.
+// Initial state: Home panel is active in the HTML.
 placeholder.classList.add('hidden');
 const homeContext = document.querySelector('[data-context="home"]');
 if (homeContext) {
@@ -55,7 +54,6 @@ navLinks.forEach(link => {
    link.addEventListener('click', (e) => {
       e.preventDefault();
       switchPanel(link.dataset.nav);
-      // If the page is scrolled, bring the split hero back into view.
       if (window.scrollY > 10) {
          window.scrollTo({ top: 0, behavior: 'smooth' });
       }
@@ -89,16 +87,12 @@ document.querySelector('#panel-work').addEventListener('mouseleave', () => {
 });
 
 // ── Mobile: Touch support ──
-// First tap on a project previews it; a second tap on the same
-// (already active) project follows the link to its repository.
-// Only for devices WITHOUT a hover pointer (true touch devices) —
-// touchscreen laptops with a mouse keep normal click-to-open behaviour.
 if (window.matchMedia('(hover: none)').matches) {
    projectItems.forEach(item => {
       item.addEventListener('click', (e) => {
          if (currentPanel !== 'work') return;
          if (item.classList.contains('active')) {
-            return; // second tap: allow default navigation to the repo
+            return; // allow default navigation to repo
          }
          e.preventDefault();
          const idx = parseInt(item.dataset.index, 10);
@@ -111,12 +105,43 @@ if (window.matchMedia('(hover: none)').matches) {
             const match = parseInt(slide.dataset.slide, 10) === idx;
             slide.classList.toggle('visible', match);
             if (match && window.innerWidth <= 900) {
-               slide.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'nearest'
-               });
+               slide.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
          });
       });
    });
 }
+
+// ── Theme Switcher Logic ──
+(function () {
+    var root    = document.documentElement;
+    var buttons = document.querySelectorAll('.theme-switch button[data-theme-set]');
+
+    function current() {
+        var v = root.getAttribute('data-theme');
+        return (v === 'light' || v === 'dark') ? v : 'auto';
+    }
+
+    function apply(state) {
+        if (state === 'auto') {
+            root.removeAttribute('data-theme');
+            localStorage.removeItem('theme');
+        } else {
+            root.setAttribute('data-theme', state);
+            localStorage.setItem('theme', state);
+        }
+        buttons.forEach(function (btn) {
+            var active = btn.dataset.themeSet === state;
+            btn.classList.toggle('is-active', active);
+            btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+    }
+
+    apply(current());
+
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            apply(btn.dataset.themeSet);
+        });
+    });
+})();
