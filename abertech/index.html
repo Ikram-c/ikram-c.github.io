@@ -1,358 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AberTech — AI for Search and Rescue</title>
-<meta name="description" content="AberTech: AI for assisting Search and Rescue. A three-pillared approach leveraging UAV imaging, ESA satellite data, and automotive dashcam tracking for difficult terrain.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AberTech — AI for Search and Rescue</title>
+    <meta name="description" content="AI for assisting Search and Rescue. A three-pillared approach leveraging UAV imaging, ESA satellite data, and automotive dashcam tracking.">
+    
+    <!-- Google Fonts: Bricolage Grotesque -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 
-<style>
-  /* Simplified Single Page CSS */
-  :root {
-    --bg-color: #f9f9f9;
-    --text-color: #1a1a1a;
-    --muted-color: #666;
-    --accent-color: #0056b3;
-    --border-color: #e0e0e0;
-    --card-bg: #ffffff;
-  }
-  
-  [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --muted-color: #a0a0a0;
-    --accent-color: #66b2ff;
-    --border-color: #333333;
-    --card-bg: #1e1e1e;
-  }
-
-  body {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  .site-tagline {
-    font-size: 0.9rem;
-    color: var(--muted-color);
-  }
-
-  nav {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-  }
-  
-  nav a:hover {
-    color: var(--accent-color);
-  }
-
-  .theme-switch button {
-    background: none;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 0.25rem 0.5rem;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 0.8rem;
-  }
-
-  .theme-switch button.is-active {
-    background: var(--text-color);
-    color: var(--bg-color);
-  }
-
-  section {
-    margin-bottom: 4rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-  }
-
-  .project-list {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-
-  .project-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-color);
-  }
-
-  .project-meta {
-    font-size: 0.85rem;
-    color: var(--muted-color);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-
-  ol {
-    padding-left: 1.5rem;
-  }
-
-  li {
-    margin-bottom: 0.75rem;
-  }
-
-  .contact-btn {
-    display: inline-block;
-    background: var(--text-color);
-    color: var(--bg-color);
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 1rem;
-  }
-
-  footer {
-    border-top: 1px solid var(--border-color);
-    padding-top: 2rem;
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--muted-color);
-  }
-
-  footer a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 0.5rem;
-  }
-
-  @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    nav {
-      flex-wrap: wrap;
-    }
-  }
-</style>
-
-<!-- Apply saved theme before paint -->
-<script>
-    (function () {
-        var t = localStorage.getItem('theme');
-        if (t === 'light' || t === 'dark') {
-            document.documentElement.setAttribute('data-theme', t);
-        }
-    })();
-</script>
+    <!-- Prevent Theme Flash -->
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') {
+                document.documentElement.setAttribute('data-theme', t);
+            }
+        })();
+    </script>
 </head>
 <body>
 
-<div class="container">
-  
-  <!-- Header & Navigation -->
-  <header>
-    <div>
-      <h1 class="site-title">AberTech</h1>
-      <div class="site-tagline">AI for Search and Rescue</div>
-    </div>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <div class="theme-switch" role="group" aria-label="Colour theme">
-          <button type="button" data-theme-set="auto" aria-pressed="false">Auto</button>
-          <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
-          <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
-      </div>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="site-brand">
+            <a href="#" class="site-title" data-nav="home">AberTech</a>
+            <div class="site-divider-v"></div>
+            <span class="site-tagline">AI for Search and Rescue</span>
+        </div>
+        <div class="header-right">
+            <nav class="site-header-nav">
+                <a href="#" data-nav="home" class="nav-active">Home</a>
+                <a href="#" data-nav="work">Projects</a>
+                <a href="#" data-nav="about">Mission</a>
+                <a href="#" data-nav="contact">Contact</a>
+            </nav>
+            <div class="theme-switch" role="group" aria-label="Colour theme">
+                <button type="button" data-theme-set="auto" aria-pressed="true" class="is-active">Auto</button>
+                <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+                <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <!-- Home Section -->
-    <section id="home">
-      <h2>AI for assisting <em>Search and Rescue</em>.</h2>
-      <p>
-        In mountainous and difficult-to-navigate terrain, rescue teams are tracking a needle in a haystack where every second counts. AberTech leverages a three-pillared approach—UAV imaging data, ESA satellite data, and automotive dashcam tracking—to improve response times without drastically adding to operational costs.
-      </p>
-      <p>
-        Inspired by 18,000 miles of field observation through Wales and Scotland, these tools are built to be simple enough for volunteer teams who can't dedicate significant hours to learning programming skills. It is a retrofitted solution aimed at improving teamwork and human aid.
-      </p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>The Three Pillars & Tooling</h2>
-      <p>Proof-of-concept demos and architecture representing our core approach to search and rescue tracking.</p>
-      
-      <div class="project-list">
+    <!-- Main Layout -->
+    <main class="split-container">
         
-        <a href="https://github.com/Ikram-c/Cloud_optimised_CCTV" class="project-card" target="_blank" rel="noopener">
-          <span class="project-meta">01 &middot; Cloud Archival &middot; Infrastructure</span>
-          <h3>Cloud-Optimised CCTV</h3>
-          <p>Search a week of footage, download only the minutes you need. Movement-aware OME-Zarr archival with chunk-level cloud querying to support core infrastructure.</p>
-        </a>
+        <!-- Left Side: Panels -->
+        <section class="left-side">
+            
+            <!-- Panel: Home -->
+            <div id="panel-home" class="panel panel-active">
+                <div class="about-content">
+                    <span class="about-label">The Initiative</span>
+                    <h1 class="about-headline">Rescue, no matter what is in your <em>way.</em></h1>
+                    <p class="about-body">
+                        In time-critical alpine emergencies, the operational window for live recovery deteriorates rapidly within minutes[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span). AberTech is an orchestration layer built to resolve this by decoupling the operational objectives of mountain search from transient hardware platforms.
+                    </p>
+                    <p class="about-body">
+                        Designed during journeys through the mountains of Scotland and Wales, this system treats search and rescue as a stable, solution-agnostic process. By utilizing cellular RF geolocation, edge-AI software, and physical terrain constraints, the platform is engineered to navigate Beyond Visual Line of Sight (BVLOS) constraints and extreme alpine conditions[span_2](start_span)[span_2](end_span).
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Core Pillars</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">18k</span>
+                            <span class="stat-label">Miles Surveyed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Edge</span>
+                            <span class="stat-label">AI Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <a href="https://github.com/Ikram-c/Cloud_Dashcam_POC" class="project-card" target="_blank" rel="noopener">
-          <span class="project-meta">02 &middot; Pillar 1 &middot; Near-Miss Detection</span>
-          <h3>Dashcam Tracking</h3>
-          <p>Chunking and streaming vehicle video data into OME-Zarr formats based on network coverage, designed to check dashcam footage for any "near misses" a rescue team may have with a target.</p>
-        </a>
+            <!-- Panel: Projects (Work) -->
+            <div id="panel-work" class="panel">
+                <div class="panel-header">
+                    <span>The Three Pillars & Tooling</span>
+                </div>
+                <ul class="project-list">
+                    <!-- Orchestration -->
+                    <li class="project-item" data-index="1">
+                        <a href="https://github.com/Ikram-c" class="project-link" target="_blank" rel="noopener">
+                            <span class="project-number">01</span>
+                            <span class="project-title">Orchestration App</span>
+                            <span class="project-category">Platform</span>
+                            <div class="project-arrow">
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Dashcam -->
+                    <li class="project-item" data-index="2">
+                        <a href="https://github.com/Ikram-c/Cloud_Dashcam_POC" class="project-link" target="_blank" rel="noopener">
+                            <span class="project-number">02</span>
+                            <span class="project-title">Dashcam POC</span>
+                            <span class="project-category">Pillar 1</span>
+                            <div class="project-arrow">
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- HexCover -->
+                    <li class="project-item" data-index="3">
+                        <a href="https://github.com/Ikram-c/hexcover" class="project-link" target="_blank" rel="noopener">
+                            <span class="project-number">03</span>
+                            <span class="project-title">HexCover Mapping</span>
+                            <span class="project-category">Pillar 2</span>
+                            <div class="project-arrow">
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- UAV Mapping -->
+                    <li class="project-item" data-index="4">
+                        <a href="https://github.com/Ikram-c/uav_mapping_obj_detection_counter" class="project-link" target="_blank" rel="noopener">
+                            <span class="project-number">04</span>
+                            <span class="project-title">UAV Tracking</span>
+                            <span class="project-category">Pillar 3</span>
+                            <div class="project-arrow">
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="panel-footer">
+                    <span>Select a module to view architectural context</span>
+                </div>
+            </div>
 
-        <a href="https://github.com/Ikram-c/hexcover" class="project-card" target="_blank" rel="noopener">
-          <span class="project-meta">03 &middot; Pillar 2 &middot; Satellite &amp; Routing</span>
-          <h3>HexCover Mapping</h3>
-          <p>Adapting Uber's H3 hexagonal models and ESA satellite data to complex land topography. The goal is to isolate pathways from a last known sighting and direct SAR services efficiently.</p>
-        </a>
+            <!-- Panel: About -->
+            <div id="panel-about" class="panel">
+                <div class="about-content">
+                    <span class="about-label">Outcome-Driven AI</span>
+                    <h2 class="about-headline">Solving the <em>Functional Job</em> of SAR.</h2>
+                    <p class="about-body">
+                        The core functional Job-to-be-Done for mountain rescue is solution-agnostic. Systems succeed when they are engineered to respect the physical, environmental, and human realities of alpine environments[span_3](start_span)[span_3](end_span).
+                    </p>
+                    <div class="about-method">
+                        <span class="method-label">Execution Strategy</span>
+                        <ol>
+                            <li>Establish high-confidence search boundaries using DEM-derived terrain friction[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span).</li>
+                            <li>Minimize latency between emergency signals and coordinate registration via cellular base station emulation[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span).</li>
+                            <li>Generate collision-free UAV trajectories along vertical alpine walls[span_8](start_span)[span_8](end_span).</li>
+                            <li>Aggregate visual edge-computing telemetry to an incident orchestration dashboard.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
-        <a href="https://github.com/Ikram-c/UAV_unsupervised_litter_counter" class="project-card" target="_blank" rel="noopener">
-          <span class="project-meta">04 &middot; Pillar 3 &middot; High-Res UAV</span>
-          <h3>UAV Anomaly Detection</h3>
-          <p>Transitioning unsupervised visual counting into human anomaly detection. Identifying targets that appear as little more than a few pixels on high-resolution UAV imagery.</p>
-        </a>
+            <!-- Panel: Contact -->
+            <div id="panel-contact" class="panel">
+                <div class="contact-content">
+                    <span class="contact-label">Collaboration</span>
+                    <h2 class="contact-headline">Join the <em>Effort</em>.</h2>
+                    <p class="about-body">
+                        Designed for locals responsible for management and leisurely tourists alike, this suite works best when integrated closely with active teams.
+                    </p>
+                    <div class="contact-details">
+                        <span>Email</span>
+                        <a href="mailto:ikramchoudhury0@gmail.com">ikramchoudhury0@gmail.com</a>
+                        <span>GitHub</span>
+                        <a href="https://github.com/Ikram-c" target="_blank">@Ikram-c</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
 
-        <a href="https://github.com/Ikram-c/vision-toolkit" class="project-card" target="_blank" rel="noopener">
-          <span class="project-meta">05 &middot; CV Monorepo &middot; QC Tooling</span>
-          <h3>Vision Toolkit</h3>
-          <p>The underlying image QC libraries being developed and consolidated into one central monorepo to support both the UAV and Dashcam pillars.</p>
-        </a>
+        <!-- Divider -->
+        <div class="split-divider"></div>
 
-      </div>
-    </section>
+        <!-- Right Side: Canvas -->
+        <section class="canvas-side">
+            
+            <!-- Default Placeholder -->
+            <div id="placeholder" class="canvas-placeholder hidden">
+                <div class="placeholder-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+                </div>
+                <span class="placeholder-text">Select a project</span>
+            </div>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>AI is no job for a <em>single person</em>.</h2>
-      <p>
-        Following extensive travels through regions like Snowdonia and the Scottish Highlands, and leveraging a background with Cefas and Defra, it became clear that search and rescue teams face monumental challenges. Funding is a continuous bottleneck, and the terrain is too vast for standard responses.
-      </p>
-      <p>
-        AberTech is dedicated to unifying UAV, satellite, and dashcam data to assist these volunteers. We need tools that are cost-effective, simple to train on, and built strictly to improve teamwork and human aid. 
-      </p>
-      
-      <h3>The Implementation Strategy</h3>
-      <ol>
-        <li>Integrate ESA satellite data to extract terrain, vegetation, and agriculture bands.</li>
-        <li>Adapt Uber's H3 hexagonal models to land topography to map efficient search pathways.</li>
-        <li>Chunk and stream automotive dashcam footage to identify missing person "near-misses".</li>
-        <li>Deploy UAV anomaly detection (e.g., Parrot systems) for high-resolution spotting in restrictive terrain.</li>
-        <li>Ensure all tools require minimal programming skills for volunteer operators.</li>
-        <li>Focus strictly on retrofitted, low-cost solutions to bypass persistent funding bottlenecks.</li>
-      </ol>
-    </section>
+            <!-- Context: Home (Orchestration Layer / Mountains in Hexagon) -->
+            <div class="canvas-context visible" data-context="home">
+                <div class="canvas-art" style="background: radial-gradient(circle at center, var(--hover-tint) 0%, transparent 70%);">
+                    <!-- SVG: Hexagon with Mountains (Image 3 Ref) -->
+                    <svg viewBox="0 0 200 200">
+                        <polygon points="100,10 180,50 180,150 100,190 20,150 20,50" class="ac" stroke-width="3" stroke-linejoin="round"/>
+                        <polygon points="100,18 172,55 172,145 100,182 28,145 28,55" class="ln" stroke-width="1"/>
+                        <!-- Mountains -->
+                        <path d="M28,145 L60,80 L90,110 L130,70 L172,120 L172,145 Z" class="fm"/>
+                        <path d="M28,145 L70,95 L110,130 L150,90 L172,130 L172,145 Z" class="fa"/>
+                        <path d="M28,145 L172,145 L172,180 L100,210 Z" fill="var(--bg)"/>
+                        <text x="100" y="165" class="txt" text-anchor="middle">Orchestration Layer</text>
+                    </svg>
+                </div>
+                <div class="canvas-context-overlay">
+                    <p class="canvas-context-quote">"Rescue, no matter what is in your way. An ecosystem of AI tools tailored to alpine survival."</p>
+                </div>
+            </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>A humble request for collaboration.</h2>
-      <p>
-        Though personal circumstances may have made collaboration difficult, any and all feedback can be of use. As a solo venture transitioning into a collaborative effort, I am actively seeking feedback and partnerships.
-      </p>
-      <a href="mailto:ikramchoudhury0@gmail.com?subject=AberTech%20SAR%20Collaboration" class="contact-btn">Email: ikramchoudhury0@gmail.com</a>
-    </section>
-  </main>
+            <!-- Context: About & Contact (Fallback abstract art) -->
+            <div class="canvas-context" data-context="about">
+                <div class="canvas-art">
+                    <!-- Abstract Radar / Telemetry (Image 5/6 Ref) -->
+                    <svg viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="60" class="ln" stroke-dasharray="2 4"/>
+                        <circle cx="100" cy="100" r="80" class="ac" stroke-dasharray="10 15 2 15"/>
+                        <circle cx="100" cy="100" r="40" class="fa" opacity="0.1"/>
+                        <path d="M100,20 L100,180 M20,100 L180,100" class="ln" opacity="0.5"/>
+                    </svg>
+                </div>
+                <div class="canvas-context-overlay">
+                    <p class="canvas-context-quote">"The computational architecture of SAR is moving to the edge to enable swarm operations and eliminate latency[span_9](start_span)[span_9](end_span)."</p>
+                </div>
+            </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 AberTech &middot; Ikram Choudhury</p>
-    <div>
-      <a href="../">Portfolio</a> |
-      <a href="https://github.com/Ikram-c" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </footer>
+            <div class="canvas-context" data-context="contact">
+                <div class="canvas-art">
+                    <svg viewBox="0 0 200 200">
+                        <path d="M40,100 Q100,40 160,100 T40,100" class="ac" fill="none" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="4" class="fa"/>
+                    </svg>
+                </div>
+                <div class="canvas-context-overlay">
+                    <p class="canvas-context-quote">"Integrating solutions with locals and volunteer teams to build an accessible safety net."</p>
+                </div>
+            </div>
 
-</div>
+            <!-- Slide 1: Orchestration App -->
+            <div class="canvas-image" data-slide="1">
+                <div class="canvas-art">
+                    <!-- Duplicated Hexagon for visual continuity -->
+                    <svg viewBox="0 0 200 200">
+                        <polygon points="100,10 180,50 180,150 100,190 20,150 20,50" class="ac" stroke-width="2"/>
+                        <path d="M20,100 L180,100 M60,30 L60,170 M140,30 L140,170" class="ln" stroke-dasharray="2 4"/>
+                        <circle cx="100" cy="100" r="30" class="fa" opacity="0.2"/>
+                        <circle cx="100" cy="100" r="6" class="fa"/>
+                    </svg>
+                </div>
+                <div class="canvas-caption">
+                    <h4 class="canvas-caption-title">Incident Orchestration</h4>
+                    <p class="canvas-caption-desc">The central hub aggregating edge AI intelligence, mapping, and probability grids for tactical commanders.</p>
+                </div>
+            </div>
 
-<!-- Theme Switcher Logic -->
-<script>
-    (function () {
-        var root    = document.documentElement;
-        var buttons = document.querySelectorAll('.theme-switch button[data-theme-set]');
+            <!-- Slide 2: Dashcam POC (Car) -->
+            <div class="canvas-image" data-slide="2">
+                <div class="canvas-art">
+                    <!-- SVG: Dashcam Vehicle (Image 4 Ref) -->
+                    <svg viewBox="0 0 200 200">
+                        <!-- Perspective Road -->
+                        <path d="M80,190 L120,190 L160,90 L40,90 Z" class="fm" opacity="0.1"/>
+                        <path d="M100,190 L100,90" class="ac" stroke-dasharray="6 6" stroke-width="2"/>
+                        <!-- Vehicle Silhouette -->
+                        <rect x="70" y="100" width="60" height="40" rx="8" class="fa"/>
+                        <path d="M75,100 L85,80 L115,80 L125,100 Z" class="fa"/>
+                        <!-- Headlights/Sensors -->
+                        <circle cx="80" cy="125" r="4" fill="var(--bg)"/>
+                        <circle cx="120" cy="125" r="4" fill="var(--bg)"/>
+                        <!-- Scan Lines -->
+                        <path d="M50,110 L150,110 M40,130 L160,130" class="ln" stroke-width="1" stroke-dasharray="4 2"/>
+                    </svg>
+                </div>
+                <div class="canvas-caption">
+                    <h4 class="canvas-caption-title">Cloud Dashcam POC</h4>
+                    <p class="canvas-caption-desc">Streaming automotive video data into chunks to identify target 'near-misses' along mountain roadways.</p>
+                </div>
+            </div>
 
-        function current() {
-            var v = root.getAttribute('data-theme');
-            return (v === 'light' || v === 'dark') ? v : 'auto';
-        }
+            <!-- Slide 3: HexCover (Satellite) -->
+            <div class="canvas-image" data-slide="3">
+                <div class="canvas-art">
+                    <!-- SVG: Orbital Satellite (Image 1 Ref) -->
+                    <svg viewBox="0 0 200 200">
+                        <!-- Orbit Ring / Pixel Noise -->
+                        <circle cx="100" cy="100" r="75" class="ln" stroke-dasharray="2 8" stroke-width="3"/>
+                        <circle cx="100" cy="100" r="55" class="ac" stroke-dasharray="1 4" stroke-width="1" opacity="0.5"/>
+                        <!-- Satellite Body -->
+                        <rect x="90" y="80" width="20" height="40" class="fa" rx="2"/>
+                        <!-- Solar Panels -->
+                        <rect x="40" y="90" width="50" height="20" class="fm" transform="rotate(-30 65 100)"/>
+                        <rect x="110" y="90" width="50" height="20" class="fm" transform="rotate(-30 135 100)"/>
+                        <circle cx="100" cy="100" r="6" fill="var(--bg)"/>
+                    </svg>
+                </div>
+                <div class="canvas-caption">
+                    <h4 class="canvas-caption-title">HexCover Mapping</h4>
+                    <p class="canvas-caption-desc">Adapting Uber's H3 hexagonal models and ESA satellite topographical bands to isolate pathways and dispatch teams efficiently.</p>
+                </div>
+            </div>
 
-        function apply(state) {
-            if (state === 'auto') {
-                root.removeAttribute('data-theme');
-                localStorage.removeItem('theme');
-            } else {
-                root.setAttribute('data-theme', state);
-                localStorage.setItem('theme', state);
-            }
-            buttons.forEach(function (btn) {
-                var active = btn.dataset.themeSet === state;
-                btn.classList.toggle('is-active', active);
-                btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-            });
-        }
+            <!-- Slide 4: UAV (Glider) -->
+            <div class="canvas-image" data-slide="4">
+                <div class="canvas-art">
+                    <!-- SVG: Fixed Wing Glider (Image 2 Ref) -->
+                    <svg viewBox="0 0 200 200">
+                        <!-- Target crosshair ground -->
+                        <path d="M100,120 L100,180 M70,150 L130,150" class="ln" stroke-width="1"/>
+                        <circle cx="100" cy="150" r="20" class="ac" stroke-dasharray="4 4"/>
+                        <!-- Glider Body -->
+                        <path d="M96,40 L104,40 L102,110 L98,110 Z" class="fa"/>
+                        <!-- Glider Wings -->
+                        <path d="M20,60 L180,60 L180,65 L100,75 L20,65 Z" class="fm"/>
+                        <circle cx="100" cy="70" r="5" class="ac" fill="var(--bg)"/>
+                        <path d="M100,70 L100,150" class="ac" stroke-dasharray="2 4" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="canvas-caption">
+                    <h4 class="canvas-caption-title">UAV Anomaly Detection</h4>
+                    <p class="canvas-caption-desc">Fixed-wing high-resolution visual tracking transitions unsupervised object counting into human anomaly verification.</p>
+                </div>
+            </div>
 
-        apply(current());
+        </section>
+    </main>
 
-        buttons.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                apply(btn.dataset.themeSet);
-            });
-        });
-    })();
-</script>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <span>&copy; 2026 AberTech &middot; Ikram Choudhury</span>
+        <div class="footer-links">
+            <a href="https://github.com/Ikram-c" target="_blank">GitHub</a>
+            <span>&middot;</span>
+            <a href="../">Return to Portfolio</a>
+        </div>
+    </footer>
 
+    <!-- External JS -->
+    <script src="script.js"></script>
 </body>
 </html>
