@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikram Choudhury - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Ikram Choudhury</h1>
+            <p class="subtitle">Data Scientist & AI/ML Solutions Specialist</p>
+            <div class="contact-links">
+                <a href="#projects">View Projects</a>
+                <a href="#writing">Read Insights</a>
+                <a href="https://github.com/ikram-c" target="_blank">GitHub</a>
+                <a href="mailto:ikramc.work@gmail.com">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="about" class="about-section">
+            <div class="grid-2-col">
+                <div>
+                    <h2>Professional Background</h2>
+                    <ul>
+                        <li><strong>Core Focus:</strong> Computer vision, Earth observation, and scalable geospatial models.</li>
+                        <li><strong>Cefas:</strong> Engineered end-to-end MLOps pipelines for terabyte/petabyte-scale marine datasets. Overhauled the UK's Benthic AI litter project (presented at ICES), and implemented RAG, NLP, and DAG models for causal analysis.</li>
+                        <li><strong>British Airways:</strong> Served as a Data Engineer Consultant, developing production flight analysis code.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Education & Philosophy</h2>
+                    <ul>
+                        <li><strong>Degrees:</strong> MSc in Space Engineering & BEng in Aerospace Engineering.</li>
+                        <li><strong>Foundation:</strong> Technical expertise built on satellite radar data and UAV aerodynamics.</li>
+                        <li><strong>Optimization:</strong> Focuses on memory utilization and garbage collection in Python pipelines. Builds cost-effective, hardware-agnostic solutions (e.g., Vulkan API, OpenCL) to bypass strict reliance on Nvidia GPUs.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="portfolio-section">
+            <h2 class="section-title">Technical Projects Portfolio</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <h4>Species Data Pipeline & RAG System</h4>
+                    <p>Hybrid codebase integrating marine species taxonomy pipelines with an end-to-end Azure AI RAG ecosystem. Features a Flask REST proxy, Tailwind frontend, and multi-agent orchestration.</p>
+                    <span class="tech-stack">Azure AI, Docling, Semantic Kernel</span>
+                </div>
+                <div class="project-card">
+                    <h4>CefasRAG</h4>
+                    <p>Python/Azure app for fisheries advice combining RAG, species taxonomic enrichment, live web automation, and cloud management via a desktop GUI to query ICES PDFs.</p>
+                    <span class="tech-stack">GPT-4o, Selenium, Azure AI Search</span>
+                </div>
+                <div class="project-card">
+                    <h4>Cloud Development Tools v2.0.0</h4>
+                    <p>Desktop app providing a unified GUI for managing Azure Cloud resources and GitHub repositories, built on a strict MVC pattern with async background execution.</p>
+                    <span class="tech-stack">tkinter/ttk, Azure-SDK, PyGithub</span>
+                </div>
+                <div class="project-card">
+                    <h4>Causal Inference Framework</h4>
+                    <p>Implements modern causal machine learning algorithms in PyTorch/Python, including CausalBertWrapper bug fixes for ATE estimation and causal discovery.</p>
+                    <span class="tech-stack">PyTorch, DoWhy, EconML, Causal-learn</span>
+                </div>
+                <div class="project-card">
+                    <h4>Biological Shape Analysis</h4>
+                    <p>Modular pipeline for automated image segmentation, Elliptic Fourier shape analysis, and Bayesian statistical modeling of fish otoliths with GPU-accelerated Fourier analysis.</p>
+                    <span class="tech-stack">CuPy, TensorFlow Probability, Plotly</span>
+                </div>
+                <div class="project-card">
+                    <h4>Drone/UAV Annotation Pipeline</h4>
+                    <p>Automated annotation counting in UAV datasets, combining ODM log parsing, feature matching, and graph theory using transitive reduction to prevent double-counting.</p>
+                    <span class="tech-stack">OpenCV, NetworkX, Segment Trees</span>
+                </div>
+                <div class="project-card">
+                    <h4>hexcover</h4>
+                    <p>Geospatial pipeline converting OSM regions and point clusters into uniform H3 hexagon covers, evaluating spatial bias using pure-NumPy vectorized algorithms.</p>
+                    <span class="tech-stack">NumPy, H3 indexing, Nesterov 2D GJK</span>
+                </div>
+                <div class="project-card">
+                    <h4>Plum Image Tools (vision-toolkit)</h4>
+                    <p>Comprehensive computer vision monorepo tailored for marine science, unifying COCO manipulation, autoencoder clustering, and geometric testing.</p>
+                    <span class="tech-stack">PyTorch, NetworkX, OpenCV</span>
+                </div>
+                <div class="project-card">
+                    <h4>video-zarr & cctv_zarr</h4>
+                    <p>Utilities converting large video files into OME-Zarr cloud-native storage. Includes optical-flow motion tracking and selective chunk-level cloud querying without downloading full videos.</p>
+                    <span class="tech-stack">zarr v3, opencv-python, multiprocessing</span>
+                </div>
+                <div class="project-card">
+                    <h4>Cloud_Dashcam_POC</h4>
+                    <p>Extraction pipeline for dashcams combining computer vision with GPX telemetry for coverage chunking, quality gating, and reflectance reconstruction.</p>
+                    <span class="tech-stack">Python, GPXpy, OpenCV</span>
+                </div>
+                <div class="project-card">
+                    <h4>CompressCompare</h4>
+                    <p>C++17 desktop app designed to visually analyze loss from re-encoding via per-pixel ΔE2000 heat maps. High-speed performance on legacy hardware via CPU/GPU parity.</p>
+                    <span class="tech-stack">C++, OpenCL, OpenCV, Dear ImGui</span>
+                </div>
+                <div class="project-card">
+                    <h4>AberTech</h4>
+                    <p>A suite of three fully functional, commercially viable applications unified through a central orchestration layer to assist mountain search and rescue missions and save lives.</p>
+                    <span class="tech-stack">Orchestration, Systems Architecture</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="writing" class="writing-section">
+            <h2 class="section-title">Featured Writing & Insights</h2>
+            <div class="writing-container">
+                <div class="project-card">
+                    <h4>Advanced Computer Vision</h4>
+                    <p><strong>Video Frame Compression for AI:</strong> Pipeline for vehicle cameras using physics-based exposure gating and coverage-aware chunking.<br><br>
+                    <strong>How I Ditched IOUs:</strong> Engineering a custom sweep-line algorithm using segment trees.<br><br>
+                    <strong>The SAHI Polygon Splitter:</strong> COCO slicing pipeline that cuts large annotated images into overlapping tiles.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Philosophy & Cloud Architecture</h4>
+                    <p><strong>The Inverted Problem:</strong> Argues that bounding scope and scaling problems to physical reality prevents severe system failures.<br><br>
+                    <strong>A Lesson in Humanity in AI:</strong> Reflections on building resilient technology shaped by solo exploration.<br><br>
+                    <strong>AberTech - Search and Rescue:</strong> Proposal for an AI framework combining UAV imagery, ESA data, and dashcams.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ikram Choudhury. Data Scientist & AI/ML Solutions Specialist.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

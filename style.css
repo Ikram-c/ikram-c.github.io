@@ -1,0 +1,207 @@
+/* Dark Theme Variables derived from provided palette */
+:root {
+    --color-darkest: #121212;   /* Darkest Charcoal - Base Background */
+    --color-dark: #2c2c2c;      /* Medium Dark Gray - Card Backgrounds */
+    --color-gray-dark: #3a3a3a; /* Dark Neutral - Borders */
+    --color-gray-light: #7a7a7a;/* Medium Light Gray - Muted Text */
+    --color-light: #e0e0e0;     /* Silvery White - High Contrast Text */
+    
+    --bg-color: var(--color-darkest);
+    --text-main: var(--color-light);
+    --text-muted: var(--color-gray-light);
+    --card-bg: var(--color-dark);
+    --border-color: var(--color-gray-dark); 
+    --accent-color: #555555;    
+    --tag-bg: #1e1e1e;       
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.8rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 1.6rem;
+    letter-spacing: -0.01em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.section-title {
+    margin-top: 3.5em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5em;
+}
+
+h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8em;
+}
+
+p, ul {
+    margin-bottom: 1.25em;
+    color: #a3a3a3; /* Softer text for readability */
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+li {
+    margin-bottom: 0.6em;
+}
+
+strong {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Header Section */
+.site-header {
+    background-color: var(--bg-color);
+    padding: 4rem 0 3rem;
+    text-align: center; /* Centered layout */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px; /* Pill shape */
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 400;
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-links a:hover {
+    background-color: var(--border-color);
+    border-color: var(--text-muted);
+}
+
+/* Layout Grids */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: var(--text-muted);
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.tech-stack {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background-color: var(--tag-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+/* Writing Section */
+.writing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Responsive Styling Adjustments */
+@media (max-width: 768px) {
+    .grid-2-col, .writing-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    h1 { font-size: 2.2rem; }
+    
+    .site-header {
+        padding: 3rem 0 2rem;
+    }
+}
